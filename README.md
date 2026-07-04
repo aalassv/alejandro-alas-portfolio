@@ -18,8 +18,8 @@ A lightweight, high-performance personal portfolio built with Vanilla HTML, CSS,
 
 ## Local Development
 To run this project locally:
-1. Clone the repository: `git clone https://github.com/yourusername/alejandro-portfolio.git`
-2. Open the directory: `cd alejandro-portfolio`
+1. Clone the repository: `git clone https://github.com/aalassv/alejandro-portfolio.git`
+2. Open the directory: `cd alejandro-alas-portfolio`
 3. Open `index.html` in your browser, or use a local server like VS Code Live Server.
 
 ## License
