@@ -1,0 +1,217 @@
+/* --- CSS Variables for Theming --- */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --accent-color: #3b82f6; /* A clean blue */
+    --nav-text: #4b5563;
+    --border-color: #e5e7eb;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f3f4f6;
+    --accent-color: #60a5fa; /* Lighter blue for dark mode */
+    --nav-text: #9ca3af;
+    --border-color: #374151;
+}
+
+/* --- Global Resets & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--nav-text);
+    margin: 0 1rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--text-color);
+}
+
+.theme-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 5%;
+    max-width: 800px;
+    margin: 4rem auto;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--nav-text);
+    margin-bottom: 2.5rem;
+}
+
+/* --- Buttons --- */
+.action-links a {
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-right: 1rem;
+    transition: opacity 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+.action-links a:hover {
+    opacity: 0.8;
+}
+
+/* --- Footer --- */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--nav-text);
+}
+
+.social-links a {
+    color: var(--nav-text);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.social-links a:hover {
+    color: var(--text-color);
+}
+
+/* --- Projects Grid --- */
+.projects-container {
+    flex: 1;
+    padding: 0 5%;
+    max-width: 1000px;
+    margin: 4rem auto;
+    width: 100%;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--text-color);
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.project-desc {
+    color: var(--nav-text);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-stack span {
+    background-color: var(--border-color);
+    color: var(--text-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
