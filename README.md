@@ -3,7 +3,7 @@
 A lightweight, high-performance personal portfolio built with Vanilla HTML, CSS, and JavaScript. 
 
 ## Live Site
-[View the live portfolio here](https://yourusername.github.io/alejandro-portfolio)
+[View the live portfolio here](https://alejandro-alas-portfolio.netlify.app)
 
 ## Features
 - **Semantic HTML5** for accessibility and SEO.
