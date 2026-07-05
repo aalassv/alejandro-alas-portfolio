@@ -39,7 +39,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 5%;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .logo a {
