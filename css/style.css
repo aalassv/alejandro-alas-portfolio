@@ -39,6 +39,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 5%;
+    position: relative; /* Added so the dropdown positions correctly relative to the header */
 }
 
 .logo a {
@@ -238,9 +239,28 @@ body {
     padding: 2rem 5%;
 }
 
-/* Hide navigation links on mobile */
+/* Mobile dropdown menu styling */
 .nav-links {
-    display: none; 
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Positions it right below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Class to toggle visibility via JavaScript */
+.nav-links.show {
+    display: flex;
+}
+
+.nav-links a {
+    margin: 1rem 0; /* Adds vertical spacing between links in the mobile drawer */
 }
 
 .nav-controls {
@@ -283,18 +303,27 @@ body {
 
 /* --- Tablet and Desktop Layout --- */
 @media (min-width: 768px) {
-    /* ... Keep your existing .hero-section and .projects-container media queries here ... */
-    
+    /* ... keep your existing container rules ... */
+
     .hamburger {
-        display: none; /* Hide hamburger on desktop */
+        display: none;
     }
 
     .nav-links {
-        display: flex; /* Show standard navigation links */
-        align-items: center;
+        display: flex; /* Overrides the mobile display: none */
+        position: static; /* Removes absolute positioning */
+        flex-direction: row; /* Aligns links horizontally */
+        width: auto;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    .nav-links a {
+        margin: 0 1rem; /* Resets link spacing to horizontal */
     }
 
     .theme-text {
-        display: inline; /* Show "Night mode" / "Day mode" text */
+        display: inline;
     }
 }
