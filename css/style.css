@@ -40,6 +40,9 @@ body {
     align-items: center;
     padding: 2rem 5%;
     position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .logo a {
@@ -253,15 +256,22 @@ body {
 
 /* --- Footer (Mobile First) --- */
 .footer {
+    border-top: 1px solid var(--border-color); /* Full width border */
+    width: 100%;
+}
+
+.footer-content {
     display: flex;
-    flex-direction: column-reverse; /* Places icons above the text on mobile */
+    flex-direction: column-reverse;
     align-items: center;
     gap: 1.5rem;
     padding: 2rem 5%;
-    border-top: 1px solid var(--border-color);
     font-size: 0.9rem;
     color: var(--nav-text);
     text-align: center;
+    max-width: 1280; /* Limits expansion */
+    margin: 0 auto;    /* Centers the content */
+    width: 100%;
 }
 
 .social-links {
@@ -322,4 +332,11 @@ body {
         flex-direction: row; /* Returns to horizontal alignment */
         justify-content: space-between;
     }
+    .footer-content {
+        flex-direction: row; 
+        justify-content: space-between;
+    }
 }
+
+
+
