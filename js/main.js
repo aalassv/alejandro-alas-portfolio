@@ -30,4 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
             textSpan.textContent = 'Night mode';
         }
     }
+
+    // --- Mobile Menu Toggle ---
+    const hamburgerBtn = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburgerBtn && navLinks) {
+        hamburgerBtn.addEventListener('click', () => {
+            // Toggles the 'show' class to open/close the menu
+            navLinks.classList.toggle('show');
+        });
+    }
 });
