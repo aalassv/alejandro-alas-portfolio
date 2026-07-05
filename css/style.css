@@ -229,3 +229,72 @@ body {
     color: var(--nav-text);
     font-size: 1.1rem;
 }
+
+/* --- Navigation (Mobile First) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+}
+
+/* Hide navigation links on mobile */
+.nav-links {
+    display: none; 
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.theme-btn:hover {
+    opacity: 0.7;
+}
+
+/* Hide theme text on mobile */
+.theme-text {
+    display: none; 
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* --- Tablet and Desktop Layout --- */
+@media (min-width: 768px) {
+    /* ... Keep your existing .hero-section and .projects-container media queries here ... */
+    
+    .hamburger {
+        display: none; /* Hide hamburger on desktop */
+    }
+
+    .nav-links {
+        display: flex; /* Show standard navigation links */
+        align-items: center;
+    }
+
+    .theme-text {
+        display: inline; /* Show "Night mode" / "Day mode" text */
+    }
+}
