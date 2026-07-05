@@ -78,7 +78,7 @@ body {
 }
 
 /* --- Hero Section --- */
-.hero-section {
+/* .hero-section {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -87,6 +87,31 @@ body {
     padding: 0 5%;
     max-width: 800px;
     margin: 4rem auto;
+} */
+
+/* --- Base Layout (Mobile First) --- */
+.hero-section,
+.projects-container {
+    flex: 1;
+    width: 100%;
+    padding: 2rem 5%; /* Slightly tighter padding for mobile */
+    margin: 0 auto;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* --- Tablet and Desktop Layout --- */
+@media (min-width: 768px) {
+    .hero-section,
+    .projects-container {
+        margin: 4rem auto; /* Larger top/bottom spacing for big screens */
+        max-width: 1000px; /* Unified consistency across all pages */
+    }
 }
 
 .hero-section h1 {
@@ -147,13 +172,13 @@ body {
 }
 
 /* --- Projects Grid --- */
-.projects-container {
+/* .projects-container {
     flex: 1;
     padding: 0 5%;
     max-width: 1000px;
     margin: 4rem auto;
     width: 100%;
-}
+} */
 
 .projects-grid {
     display: grid;
@@ -213,4 +238,17 @@ body {
 
 .project-links a:hover {
     text-decoration: underline;
+}
+
+/* --- Page Specific Elements --- */
+.page-title {
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--nav-text);
+    font-size: 1.1rem;
 }
