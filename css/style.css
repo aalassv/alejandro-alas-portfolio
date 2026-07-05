@@ -251,24 +251,34 @@ body {
     text-decoration: underline;
 }
 
-/* --- Footer --- */
+/* --- Footer (Mobile First) --- */
 .footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse; /* Places icons above the text on mobile */
+    align-items: center;
+    gap: 1.5rem;
     padding: 2rem 5%;
     border-top: 1px solid var(--border-color);
     font-size: 0.9rem;
     color: var(--nav-text);
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem; /* Adds even spacing between the SVG icons */
 }
 
 .social-links a {
     color: var(--nav-text);
     text-decoration: none;
-    margin-left: 1rem;
+    display: flex; /* Helps perfectly center the SVGs */
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .social-links a:hover {
     color: var(--text-color);
+    transform: translateY(-3px); /* Adds a subtle lift effect on hover */
 }
 
 /* --- Tablet and Desktop Layout --- */
@@ -307,5 +317,9 @@ body {
 
     .theme-text {
         display: inline; 
+    }
+    .footer {
+        flex-direction: row; /* Returns to horizontal alignment */
+        justify-content: space-between;
     }
 }
