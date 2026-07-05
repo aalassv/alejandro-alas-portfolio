@@ -241,26 +241,39 @@ body {
 
 /* Mobile dropdown menu styling */
 .nav-links {
-    display: none; /* Hidden by default */
+    display: flex; /* Switch default layout engine to flex */
     position: absolute;
-    top: 100%; /* Positions it right below the navbar */
+    top: 100%; 
     left: 0;
     width: 100%;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /* Ensures a solid background color */
     flex-direction: column;
     padding: 2rem 0;
-    border-bottom: 1px solid var(--border-color);
     text-align: center;
     z-index: 1000;
+    
+    /* Smooth transition states */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    
+    /* Adds depth over the page content */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); 
 }
 
 /* Class to toggle visibility via JavaScript */
 .nav-links.show {
-    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .nav-links a {
-    margin: 1rem 0; /* Adds vertical spacing between links in the mobile drawer */
+    margin: 1rem 0;
+    display: inline-block;
+    width: 100%; /* Ensures clicking anywhere on the line works */
+    font-size: 1.2rem;
 }
 
 .nav-controls {
