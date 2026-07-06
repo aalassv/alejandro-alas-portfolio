@@ -77,7 +77,7 @@ body {
 }
 
 .theme-text {
-    display: none; /* Hidden on mobile */
+    display: none;
 }
 
 .hamburger {
@@ -256,7 +256,7 @@ body {
 
 /* --- Footer (Mobile First) --- */
 .footer {
-    border-top: 1px solid var(--border-color); /* Full width border */
+    border-top: 1px solid var(--border-color);
     width: 100%;
 }
 
@@ -269,26 +269,26 @@ body {
     font-size: 0.9rem;
     color: var(--nav-text);
     text-align: center;
-    max-width: 1280; /* Limits expansion */
-    margin: 0 auto;    /* Centers the content */
+    max-width: 1280px;
+    margin: 0 auto;
     width: 100%;
 }
 
 .social-links {
     display: flex;
-    gap: 1.5rem; /* Adds even spacing between the SVG icons */
+    gap: 1.5rem;
 }
 
 .social-links a {
     color: var(--nav-text);
     text-decoration: none;
-    display: flex; /* Helps perfectly center the SVGs */
+    display: flex;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .social-links a:hover {
     color: var(--text-color);
-    transform: translateY(-3px); /* Adds a subtle lift effect on hover */
+    transform: translateY(-3px);
 }
 
 /* --- Tablet and Desktop Layout --- */
@@ -312,7 +312,6 @@ body {
         background-color: transparent;
         box-shadow: none;
         
-        /* THIS FIXES THE INVISIBLE DESKTOP LINKS */
         opacity: 1;
         pointer-events: auto;
         transform: none;
@@ -329,7 +328,7 @@ body {
         display: inline; 
     }
     .footer {
-        flex-direction: row; /* Returns to horizontal alignment */
+        flex-direction: row;
         justify-content: space-between;
     }
     .footer-content {
