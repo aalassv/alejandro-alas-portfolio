@@ -36,4 +36,22 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('show');
         });
     }
+
+    // --- Scroll Spy for Rail Navigation (Case Studies) ---
+    const sections = document.querySelectorAll('main section');
+    const links = document.querySelectorAll('.rail a');
+    
+
+    if (sections.length > 0 && links.length > 0) {
+        const setActive = () => {
+            let current = '';
+            sections.forEach(sec => {
+                const rect = sec.getBoundingClientRect();
+                if (rect.top <= 120) current = sec.id;
+            });
+            links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+        };
+        window.addEventListener('scroll', setActive);
+        setActive(); // 
+    }
 });
