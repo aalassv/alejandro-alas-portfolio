@@ -1,18 +1,44 @@
 /* --- CSS Variables for Theming --- */
 :root {
-    --bg-color: #ffffff;
+    /* Global Variables (Light Mode) */
+    --bg-color: #FFFFFF;
     --text-color: #1a1a1a;
     --accent-color: #3b82f6;
     --nav-text: #4b5563;
     --border-color: #e5e7eb;
+    
+    /* Case Study Specific Variables (Light Mode) */
+    --bg: #ffffff;
+    --card: #f9fafb;
+    --card-alt: #f3f4f6;
+    --border: rgba(0, 0, 0, 0.1);
+    --text: #1a1a1a;
+    --muted: #4b5563;
+    --muted-2: #6b7280;
+    --blue: #3b82f6;
+    --yellow: #ca8a04;
+    --green: #16a34a;
 }
 
 [data-theme="dark"] {
-    --bg-color: #121212;
+    /* Global Variables (Dark Mode) */
+    --bg-color: #0A0A0A;
     --text-color: #f3f4f6;
     --accent-color: #60a5fa;
     --nav-text: #9ca3af;
     --border-color: #374151;
+    
+    /* Case Study Specific Variables (Dark Mode) */
+    --bg: #0A0A0A;
+    --card: #141414;
+    --card-alt: #1A1D22;
+    --border: rgba(255, 255, 255, 0.09);
+    --text: #FFFFFF;
+    --muted: #9CA3AF;
+    --muted-2: #6B7280;
+    --blue: #5B8DEF;
+    --yellow: #EAB308;
+    --green: #22C55E;
 }
 
 /* --- Global Resets & Typography --- */
@@ -20,6 +46,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -93,7 +123,7 @@ body {
 .nav-links {
     display: flex;
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     width: 100%;
     background-color: var(--bg-color);
@@ -101,13 +131,13 @@ body {
     padding: 2rem 0;
     text-align: center;
     z-index: 1000;
-    
+
     /* Hidden states for mobile */
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
     transition: opacity 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
 .nav-links.show {
@@ -127,13 +157,15 @@ body {
     transition: color 0.2s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--text-color);
 }
 
 /* --- Base Layout (Mobile First) --- */
 .hero-section,
-.projects-container {
+.projects-container,
+.wrap {
     flex: 1;
     width: 100%;
     padding: 2rem 5%;
@@ -202,25 +234,25 @@ body {
 }
 
 .apple-card {
-    background-color: var(--bg-color); /* Hooks into light/dark theme */
+    background-color: var(--bg-color);
     border: 1px solid var(--border-color);
-    border-radius: 24px; /* Large Apple-style radius */
-    overflow: hidden;    /* Keeps images inside the curves */
+    border-radius: 24px;
+    overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Subtle depth */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     min-height: 450px;
 }
 
 [data-theme="dark"] .apple-card {
-    background-color: #1a1a1a; /* Slightly elevated dark card */
+    background-color: #1a1a1a;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .apple-card:hover {
-    transform: scale(1.02); /* Gentle pop on hover */
+    transform: scale(1.02);
 }
 
 .card-content {
@@ -252,27 +284,25 @@ body {
     line-height: 1.5;
 }
 
-/* Image styling to bleed to the bottom edge */
 .card-image-wrapper {
     width: 100%;
-    height: 250px; /* Fixed height for image area */
+    height: 250px;
     margin-top: 2rem;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Pushes image to the bottom */
-    background-color: var(--border-color); /* Subtle background behind image */
+    align-items: flex-end;
+    background-color: var(--border-color);
 }
 
 .card-image {
     width: auto;
-    height: 90%; 
+    height: 90%;
     object-fit: contain;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-    box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Apple-style floating action icon */
 .card-link-icon {
     position: absolute;
     bottom: 1.5rem;
@@ -333,10 +363,12 @@ body {
 
 /* --- Tablet and Desktop Layout --- */
 @media (min-width: 768px) {
+
     .hero-section,
-    .projects-container {
-        margin: 4rem auto; 
-        max-width: 1000px; 
+    .projects-container,
+    .wrap {
+        margin: 4rem auto;
+        max-width: 1000px;
     }
 
     .hero-section h1,
@@ -349,35 +381,36 @@ body {
     }
 
     .nav-links {
-        display: flex; 
-        position: static; 
-        flex-direction: row; 
+        display: flex;
+        position: static;
+        flex-direction: row;
         width: auto;
         padding: 0;
         background-color: transparent;
         box-shadow: none;
-        
         opacity: 1;
         pointer-events: auto;
         transform: none;
     }
 
     .nav-links a {
-        margin: 0 1rem; 
+        margin: 0 1rem;
         width: auto;
         font-size: 1rem;
         display: inline;
     }
 
     .theme-text {
-        display: inline; 
+        display: inline;
     }
+
     .footer {
         flex-direction: row;
         justify-content: space-between;
     }
+
     .footer-content {
-        flex-direction: row; 
+        flex-direction: row;
         justify-content: space-between;
     }
 }
@@ -391,5 +424,547 @@ body {
     letter-spacing: 0.05em;
 }
 
+/* =========================================
+   CASE STUDY SPECIFIC STYLES
+   ========================================= */
 
 
+.page-grid {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+@media (max-width: 860px) {
+    .page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rail {
+        display: none;
+    }
+}
+
+/* Case Study Typography Overrides */
+h1,
+h2,
+h3 {
+    color: var(--text);
+    margin: 0 0 0.4em 0;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+}
+
+.mono {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Case Study Nav Overrides */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 0;
+}
+
+.logo {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo .mark {
+    color: var(--text);
+}
+
+.theme-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--text);
+    font-size: 16px;
+}
+
+/* Case Study Hero */
+.hero {
+    padding: 56px 0 40px 0;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    max-width: 16ch;
+}
+
+.hero .tagline {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 60ch;
+    margin-top: 14px;
+}
+
+.status-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 13px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.badge.live {
+    background: var(--green);
+    color: #04140A;
+    border-color: var(--green);
+}
+
+.hero-actions {
+    margin-top: 28px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn.primary {
+    background: #FFFFFF;
+    color: #0A0A0A;
+}
+
+.btn.primary:hover {
+    background: #E5E5E5;
+}
+
+.btn.secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn.secondary:hover {
+    border-color: var(--text);
+}
+
+/* Case Study Rail */
+.rail {
+    display: block;
+    position: sticky;
+    top: 40px;
+    padding-top: 70px;
+    border-left: 1px solid var(--border);
+    padding-left: 20px;
+}
+
+.rail-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--muted-2);
+    letter-spacing: 0.06em;
+    margin-bottom: 16px;
+}
+
+.rail a {
+    display: block;
+    font-size: 13.5px;
+    color: var(--muted);
+    padding: 8px 0;
+    border-left: 2px solid transparent;
+    margin-left: -21px;
+    padding-left: 19px;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.rail a:hover,
+.rail a.active {
+    color: var(--text);
+    border-left-color: var(--blue);
+}
+
+/* Case Study Section base */
+section {
+    padding: 52px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+.section-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--muted-2);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+}
+
+section h2 {
+    font-size: 26px;
+}
+
+.lede {
+    font-size: 16px;
+    max-width: 68ch;
+    color: var(--muted);
+}
+
+/* Case Study Meta grid */
+.meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 26px;
+}
+
+@media (max-width: 700px) {
+    .meta-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.meta-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+}
+
+.meta-card .k {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--muted-2);
+    margin-bottom: 6px;
+}
+
+.meta-card .v {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* Case Study Role split */
+.role-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 26px;
+}
+
+@media (max-width: 700px) {
+    .role-split {
+        grid-template-columns: 1fr;
+    }
+}
+
+.role-card {
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--card);
+}
+
+.role-card h3 {
+    font-size: 17px;
+}
+
+.role-card ul {
+    padding-left: 20px;
+    margin: 12px 0 0 0;
+}
+
+.role-card li {
+    margin-bottom: 8px;
+    font-size: 14.5px;
+    color: var(--muted);
+}
+
+.role-card.mine li::marker {
+    color: var(--blue);
+}
+
+/* Case Study Sketch note (excalidraw) */
+.sketch-note {
+    margin-top: 22px;
+    background: var(--card);
+    border: 1.5px dashed var(--border);
+    border-radius: 14px;
+    padding: 22px 24px;
+    position: relative;
+}
+
+.sketch-note::before {
+    content: "✎ excalidraw session";
+    position: absolute;
+    top: -11px;
+    left: 20px;
+    background: var(--bg);
+    padding: 0 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sketch-note p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--muted);
+}
+
+/* Case Study Trello strip */
+.trello-strip {
+    margin-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 700px) {
+    .trello-strip {
+        grid-template-columns: 1fr;
+    }
+}
+
+.trello-col {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.trello-col-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--muted-2);
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+}
+
+.sticky {
+    background: var(--card-alt);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    border-left: 3px solid var(--yellow);
+}
+
+.trello-col.doing .sticky {
+    border-left-color: var(--blue);
+}
+
+.trello-col.done .sticky {
+    border-left-color: var(--green);
+    opacity: 0.8;
+}
+
+/* Case Study Features */
+.feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+    padding: 32px 0;
+    border-top: 1px solid var(--border);
+}
+
+.feature:first-of-type {
+    border-top: none;
+}
+
+.feature:nth-of-type(even) .feature-media {
+    order: 2;
+}
+
+@media (max-width: 800px) {
+    .feature {
+        grid-template-columns: 1fr;
+    }
+
+    .feature:nth-of-type(even) .feature-media {
+        order: 0;
+    }
+}
+
+.feature-media {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    aspect-ratio: 16/10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted-2);
+    font-size: 12px;
+    text-align: center;
+    padding: 16px;
+}
+
+.feature-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 8px;
+}
+
+.feature h3 {
+    font-size: 19px;
+}
+
+.feature p {
+    font-size: 14.5px;
+    color: var(--muted);
+}
+
+/* Case Study Tags */
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.tag {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--muted);
+}
+
+/* Case Study Decisions */
+.decision {
+    margin-top: 18px;
+    padding: 18px 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: 0 14px 14px 0;
+}
+
+.decision .k {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 6px;
+}
+
+.decision p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--muted);
+}
+
+/* Case Study Impact */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 26px;
+}
+
+@media (max-width: 700px) {
+    .impact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.impact-stat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.impact-stat .num {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.impact-stat .label {
+    font-size: 12.5px;
+    color: var(--muted-2);
+    margin-top: 4px;
+}
+
+/* Case Study Reflection */
+.reflection {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.reflection p {
+    color: var(--muted);
+    max-width: 65ch;
+}
+
+/* Case Study Footer nav */
+.footer-nav {
+    padding: 44px 0 70px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-nav a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.footer-nav .back {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.footer-nav a:hover {
+    color: var(--blue);
+}
+
+/* Mobile Override for Rail */
+@media (max-width: 860px) {
+    .rail {
+        display: none !important;
+    }
+}
