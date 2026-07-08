@@ -48,7 +48,7 @@
     <div class="hero">
       <div class="eyebrow">Case Study · Software Engineering</div>
       <h1>Castlemilk Pantry</h1>
-      <p class="tagline">A membership, eligibility-check, and reporting platform built for a community food pantry —
+      <p class="tagline">A membership, eligibility-check, and reporting platform built for a community food pantry
         replacing manual spreadsheets with digital QR check-ins and automated SMS.</p>
       <div class="status-row">
         <span class="badge live">● Live in production</span>
@@ -79,10 +79,11 @@
       <main>
         <section id="overview">
           <div class="section-label">01 — Overview</div>
-          <h2>The context</h2>
+          <h2>Background</h2>
           <p class="lede">Castlemilk Pantry is a community food pantry supporting local members through subsidised
-            shopping. Before this system existed, every part of running it — registering members, checking eligibility,
-            tracking payments, and reporting to funders — was done by hand.</p>
+            shopping. Before this system existed, every part of running it, registering members, checking weekly shop
+            eligibility,
+            tracking user shops, and reporting to funders — was done by hand.</p>
           <div class="meta-grid">
             <div class="meta-card">
               <div class="k">Client</div>
@@ -104,13 +105,13 @@
           <h2>I was a user before I was the developer</h2>
           <p class="lede">I used the pantry myself and saw the daily burden firsthand: staff manually registering users
             and checking, sheet by sheet, whether each person was eligible to shop that day. At the end of every day,
-            week, month, and quarter, someone had to turn that paperwork into reports for funders — hours of work that
+            week, month, and quarter, someone had to turn that paperwork into reports for funders, hours of work that
             should have gone toward the community instead.</p>
           <p class="lede" style="margin-top:14px;">I offered to help as a newly qualified full-stack developer. We met
             so I could introduce myself properly and bring an early dashboard mockup to that first conversation. Once we
             agreed to move forward, we signed a Data Protection Impact Assessment before any development began.</p>
           <p class="lede" style="margin-top:14px;">I introduced the agile approach I'd learned on my CodeYourFuture
-            final project (Bikes for Refugees), giving Fiona and Kelly the Product Owner role — defining requirements
+            final project (Bikes for Refugees), giving Fiona and Kelly the Product Owner role defining requirements
             and prioritising the backlog around business value, while I ran delivery.</p>
 
           <div class="sketch-note">
@@ -180,53 +181,85 @@
           <div class="feature">
             <div>
               <div class="feature-num">Feature 01</div>
-              <h3>Multi-type eligibility scanner</h3>
-              <p>Scans a member's QR code to instantly verify status — active, in a grace period, or annual payment due.
-                Evolved to also handle non-members, signposted users, and charity-sponsored shopping payments in the
-                same flow.</p>
+              <h3>Membership database</h3>
+              <p>Searchable member records with editable profiles and status tracking. Staff can message one member or
+                broadcast SMS to targeted groups, using specific or generic templates.</p>
             </div>
-            <div class="feature-media">[ Screenshot: scanner in use — replace with real image ]</div>
+
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/Members-database.png" alt="Database View 1" class="zoomable-image">
+              <img src="assets/images/sms-message.png" alt="Database View 2" class="zoomable-image">
+              <img src="assets/images/message-sms.jpg" alt="Database View 3" class="zoomable-image">
+            </div>  
           </div>
 
           <div class="feature">
             <div>
               <div class="feature-num">Feature 02</div>
-              <h3>Membership database</h3>
-              <p>Searchable member records with editable profiles and status tracking. Staff can message one member or
-                broadcast SMS to targeted groups, using specific or generic templates.</p>
+              <h3>Automated onboarding</h3>
+              <p>New registration triggers a templated welcome email with membership rules, benefits, and a pantry
+                orientation video, plus an SMS with a direct link to the member's profile.</p>
             </div>
-            <div class="feature-media">[ Screenshot: membership database view ]</div>
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/Registration.png" alt="Database View 1" class="zoomable-image">
+              <img src="assets/images/First-part-of-template.png" alt="Database View 2" class="zoomable-image">
+              <img src="assets/images/Second-part-email.png" alt="Database View 3" class="zoomable-image">
+              <img src="assets/images/Last-part-email-video.png" alt="Database View 4" class="zoomable-image">
+            </div>
           </div>
 
           <div class="feature">
             <div>
               <div class="feature-num">Feature 03</div>
-              <h3>Automated onboarding</h3>
-              <p>New registration triggers a templated welcome email with membership rules, benefits, and a pantry
-                orientation video, plus an SMS with a direct link to the member's profile.</p>
+              <h3>Multi-type shop scanner</h3>
+              <p>Scans a member's QR code to instantly verify status — active, in a grace period, or annual payment due.
+                Evolved to also handle non-members, signposted users, and charity-sponsored shopping payments in the
+                same flow.</p>
             </div>
-            <div class="feature-media">[ Screenshot: onboarding email/SMS ]</div>
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/Scanning feature.jpg" alt="Database View 1" class="zoomable-image">
+              <img src="assets/images/Active-only.jpg" alt="Database View 2" class="zoomable-image">
+              <img src="assets/images/Expire-only.jpg" alt="Database View 3" class="zoomable-image">
+              <img src="assets/images/Multi payment.PNG" alt="Database View 4" class="zoomable-image">
+            </div>
           </div>
+
+
 
           <div class="feature">
             <div>
               <div class="feature-num">Feature 04</div>
-              <h3>Reporting dashboard</h3>
-              <p>Daily, weekly, quarterly, and annual reports for funders: new members, members per quarter, members by
-                housing association, member vs. non-member split, and dietary stock needs — generated instantly instead
-                of hand-compiled.</p>
+              <h3>Reporting</h3>
+              <p>Daily reporting, Weekly shop, Membership payment, annual payment, quarterly, and annual reports for funders: new members, members per quarter, members by
+                housing association, member vs. non-member split, generated instantly instead of hand-compiled.</p>
             </div>
-            <div class="feature-media">[ Screenshot: dashboard graphs ]</div>
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/Reports.png" alt="Database View 1" class="zoomable-image">
+              <img src="assets/images/Quarterly.png" alt="Database View 2" class="zoomable-image">
+            </div>
           </div>
 
           <div class="feature">
             <div>
               <div class="feature-num">Feature 05</div>
+              <h3>Dashboard</h3>
+              <p>Get clear, accessible insight into their daily, weekly, and monthly visitor trends, along with new member sign-ups, total membership counts, and grouped dietary needs.</p>
+            </div>
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/Dashboard.png" alt="Database View 1" class="zoomable-image">
+            </div>
+          </div>
+
+          <div class="feature">
+            <div>
+              <div class="feature-num">Feature 06</div>
               <h3>Member self-service profile</h3>
-              <p>Members log in to see their own status and personal QR code, and can message pantry admins directly
+              <p>Members access their unique profile to see their own membership status and personal QR code to make a weekly shop, and can message pantry admins directly
                 with questions about other services.</p>
             </div>
-            <div class="feature-media">[ Screenshot: member profile view ]</div>
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/communications.png" alt="Database View 1" class="zoomable-image">
+            </div>
           </div>
         </section>
 
@@ -240,8 +273,9 @@
             <span class="tag">PostgreSQL</span>
             <span class="tag">AWS EC2 + RDS</span>
             <span class="tag">Firebase Auth</span>
+            <span class="tag">RBAC Security model</span>
             <span class="tag">MUI</span>
-            <span class="tag">Dokploy (in progress)</span>
+            <span class="tag">Dokploy (Suggested)</span>
           </div>
 
           <div class="decision">
@@ -252,7 +286,7 @@
           <div class="decision">
             <div class="k">Decision — Auth &amp; security</div>
             <p>Used Firebase Auth with token-based sessions; every single API endpoint is protected with token
-              verification rather than relying on client-side checks.</p>
+              verification rather than relying on client-side checks. As well Sign up and Sign is managed n use</p>
           </div>
           <div class="decision">
             <div class="k">Decision — Infrastructure evolution</div>
@@ -303,12 +337,13 @@
       </main>
     </div>
   </div>
-
-  <!-- Template Footer -->
+  <dialog id="image-modal" class="lightbox full-screen-lightbox">
+    <button id="close-modal" aria-label="Close image">✕</button>
+    <div class="modal-track" id="modal-track"></div>
+  </dialog>
   <footer class="footer">
     <div class="footer-content">
       <p>© 2026 Alejandro Alas. All rights reserved.</p>
-
       <div class="social-links">
         <a href="https://github.com/aalassv" target="_blank" aria-label="GitHub">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -337,7 +372,6 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
-
 </body>
 
 </html>

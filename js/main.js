@@ -75,3 +75,59 @@ projectCards.forEach((card) => {
     }
   });
 });
+
+// --- Swipeable Image Lightbox (Popup) ---
+const imageModal = document.getElementById('image-modal');
+const modalTrack = document.getElementById('modal-track');
+const closeModalBtn = document.getElementById('close-modal');
+const featureContainers = document.querySelectorAll('.feature-media');
+
+if (imageModal && modalTrack && featureContainers.length > 0) {
+    featureContainers.forEach(container => {
+        const images = container.querySelectorAll('.zoomable-image');
+        
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                // 1. Clear previous images from the modal
+                modalTrack.innerHTML = '';
+                
+                // 2. Load all images from this feature block into the modal carousel
+                images.forEach((sourceImg, i) => {
+                    const newImg = document.createElement('img');
+                    newImg.setAttribute('src', sourceImg.getAttribute('src'));
+                    newImg.setAttribute('alt', sourceImg.getAttribute('alt'));
+                    newImg.dataset.index = i; // Tag it with an index for scrolling
+                    modalTrack.appendChild(newImg);
+                });
+
+                // 3. Lock background scroll and open modal
+                document.body.classList.add('no-scroll');
+                imageModal.showModal();
+                closeModalBtn.blur();
+
+                // 4. Instantly snap to the exact image the user clicked
+                setTimeout(() => {
+                    const target = modalTrack.querySelector(`[data-index="${index}"]`);
+                    if(target) {
+                        target.scrollIntoView({ behavior: 'instant', block: 'nearest', inline: 'center' });
+                    }
+                }, 10); // 10ms delay ensures the browser paints the DOM first
+            });
+        });
+    });
+
+    const closeDialog = () => {
+        imageModal.close();
+        document.body.classList.remove('no-scroll');
+        modalTrack.innerHTML = ''; // Clean up track memory
+    };
+
+    closeModalBtn.addEventListener('click', closeDialog);
+
+    // Close when clicking empty space in the modal (but not the image itself)
+    modalTrack.addEventListener('click', (e) => {
+        if (e.target === modalTrack) {
+            closeDialog();
+        }
+    });
+}

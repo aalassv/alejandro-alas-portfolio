@@ -970,3 +970,113 @@ section h2 {
         display: none !important;
     }
 }
+/* --- Feature Image Hover State --- */
+.feature-media {
+    padding: 0;
+    overflow: hidden;
+}
+
+.zoomable-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.zoomable-image:hover {
+    transform: scale(1.03);
+}
+
+/* --- Thumbnail Grid (On Page) --- */
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.thumbnail-grid .zoomable-image {
+    width: 100%;
+    aspect-ratio: 4/3; /* Keeps all thumbnails uniform */
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.thumbnail-grid .zoomable-image:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+/* --- Full-Screen Swipeable Lightbox --- */
+.full-screen-lightbox {
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    padding: 0;
+    border: none;
+    overflow: hidden; /* Hide main scrollbars */
+}
+
+.full-screen-lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.95); /* Deep dark backdrop */
+}
+
+/* The horizontal swipe track inside the modal */
+.modal-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Native CSS snapping */
+    align-items: center;
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.modal-track::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome/Safari */
+}
+
+.modal-track img {
+    flex: 0 0 100vw; /* Forces each image to take exactly 1 screen width */
+    max-height: 90vh;
+    object-fit: contain;
+    scroll-snap-align: center;
+    padding: 0 3rem; /* Prevents images from hitting the screen edges */
+}
+
+#close-modal {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background: #ffffff;
+    border: none;
+    color: #000000;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+    z-index: 100;
+}
+
+#close-modal:hover {
+    transform: scale(1.1);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
