@@ -1,4 +1,3 @@
-/* --- CSS Variables for Theming --- */
 :root {
     /* Global Variables (Light Mode) */
     --bg-color: #FFFFFF;
@@ -201,15 +200,20 @@ body {
 }
 
 /* --- Buttons --- */
+.action-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
 .action-links a {
     text-decoration: none;
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
     font-weight: 600;
-    margin-right: 1rem;
     transition: opacity 0.2s;
 }
-
 .btn-primary {
     background-color: var(--text-color);
     color: var(--bg-color);
@@ -283,6 +287,23 @@ body {
     color: var(--nav-text);
     font-size: 1rem;
     line-height: 1.5;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: var(--card-alt);
+    border: 1px solid var(--border-color);
+    color: var(--nav-text);
 }
 
 .card-image-wrapper {
@@ -1008,7 +1029,7 @@ section h2 {
 
 .thumbnail-grid .zoomable-image {
     width: 100%;
-    aspect-ratio: 4/3; /* Keeps all thumbnails uniform */
+    aspect-ratio: 4/3;
     object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
@@ -1030,11 +1051,11 @@ section h2 {
     background: transparent;
     padding: 0;
     border: none;
-    overflow: hidden; /* Hide main scrollbars */
+    overflow: hidden;
 }
 
 .full-screen-lightbox::backdrop {
-    background: rgba(0, 0, 0, 0.95); /* Deep dark backdrop */
+    background: rgba(0, 0, 0, 0.95); 
 }
 
 /* The horizontal swipe track inside the modal */
@@ -1043,21 +1064,21 @@ section h2 {
     width: 100%;
     height: 100%;
     overflow-x: auto;
-    scroll-snap-type: x mandatory; /* Native CSS snapping */
+    scroll-snap-type: x mandatory;
     align-items: center;
-    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    scrollbar-width: none;
 }
 
 .modal-track::-webkit-scrollbar {
-    display: none; /* Hides scrollbar in Chrome/Safari */
+    display: none;
 }
 
 .modal-track img {
-    flex: 0 0 100vw; /* Forces each image to take exactly 1 screen width */
+    flex: 0 0 100vw; 
     max-height: 90vh;
     object-fit: contain;
     scroll-snap-align: center;
-    padding: 0 3rem; /* Prevents images from hitting the screen edges */
+    padding: 0 3rem; 
 }
 
 #close-modal {
@@ -1094,7 +1115,7 @@ section h2 {
     top: 50%;
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.1); 
-    backdrop-filter: blur(4px); /* Frosty glass effect */
+    backdrop-filter: blur(4px); 
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #ffffff;
     width: 50px;
@@ -1103,7 +1124,7 @@ section h2 {
     font-size: 1.2rem;
     cursor: pointer;
     z-index: 100;
-    display: none; /* Hidden by default; JS will turn them on */
+    display: none;
     align-items: center;
     justify-content: center;
     transition: background 0.2s, transform 0.2s;
@@ -1159,3 +1180,31 @@ section h2 {
     font-size: 1rem;
     line-height: 1.5;
 }
+
+.stat-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.stat-strip span {
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.stat-strip span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+
