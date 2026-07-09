@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auldhouse Community Church — Case Study | Alejandro Alas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Template Header -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">✦ Alejandro Alas</a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="about.html">About</a>
+        </nav>
+        <div class="nav-controls">
+            <button id="theme-toggle" class="theme-btn">
+                <span class="theme-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </span>
+            </button>
+
+            <button class="hamburger" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="9" x2="20" y2="9"></line>
+                    <line x1="4" y1="15" x2="20" y2="15"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Case Study Content -->
+    <div class="wrap">
+      <div class="hero">
+        <div class="eyebrow">Case Study · Software Engineering</div>
+        <h1>Auldhouse Community Church</h1>
+        <p class="tagline">A membership, eligibility-check, and reporting platform built for a community food pantry — replacing manual spreadsheets with digital QR check-ins and automated SMS.</p>
+        <p class="tagline">A membership app, shop eligibility-check, and reporting platform built for a community food
+        pantry
+        replacing manual spreadsheets with digital QR check-ins and automated SMS.</p>
+      <div class="status-row">
+        <span class="badge live">● Live in production</span>
+        <span class="badge">Launched May 2025</span>
+        <span class="badge">Mar 2023 → Present</span>
+        <span class="badge">350+ members</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#" class="btn primary trigger-feature-dialog"
+          data-message="The live site is currently undergoing deployment. Check back soon!">View Live Site</a>
+        <a href="#" class="btn secondary trigger-feature-dialog"
+          data-message="The code repository is currently being cleaned up and will be made public shortly.">Code
+          Sample</a>
+        <a href="projects.html" class="btn secondary">← All Projects</a>
+      </div>
+    </div>
+
+    <div class="page-grid">
+      <nav class="rail">
+        <div class="rail-title">On this page</div>
+        <a href="#overview">Overview</a>
+        <a href="#origin">How it started</a>
+        <a href="#role">My role</a>
+        <a href="#process">Process &amp; tools</a>
+        <a href="#features">Key features</a>
+        <a href="#technical">Technical breakdown</a>
+        <a href="#impact">Impact</a>
+        <a href="#reflection">Lessons learned</a>
+      </nav>
+
+      <main>
+        <section id="overview">
+          <div class="section-label">01 — Overview</div>
+          <h2>Background</h2>
+          <p class="lede">Castlemilk Pantry is a community food pantry supporting local members through subsidised
+            shopping. Before this system existed, every part of running it, registering members, checking weekly shop
+            eligibility,
+            tracking user shops, and reporting to funders — was done by hand.</p>
+          <div class="meta-grid">
+            <div class="meta-card">
+              <div class="k">Client</div>
+              <div class="v">Castlemilk Pantry</div>
+            </div>
+            <div class="meta-card">
+              <div class="k">Timeline</div>
+              <div class="v">Mar 2023 – May 2025 launch</div>
+            </div>
+            <div class="meta-card">
+              <div class="k">Team</div>
+              <div class="v">Me + 2 Product Owners</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="origin">
+          <div class="section-label">02 — How It Started</div>
+          <h2>I was a user before I was the developer</h2>
+          <p class="lede">I used the pantry myself and saw the daily burden firsthand: staff manually registering users
+            and checking, sheet by sheet, whether each person was eligible to shop that day. At the end of every day,
+            week, month, and quarter, someone had to turn that paperwork into reports for funders, hours of work that
+            should have gone toward the community instead.</p>
+          <p class="lede" style="margin-top:14px;">I offered to help as a newly qualified full-stack developer. We met
+            so I could introduce myself properly and bring an early dashboard mockup to that first conversation. Once we
+            agreed to move forward, we signed a Data Protection Impact Assessment before any development began.</p>
+          <p class="lede" style="margin-top:14px;">I introduced the agile approach I'd learned on my CodeYourFuture
+            final project (Bikes for Refugees), giving Fiona and Kelly the Product Owner role defining requirements
+            and prioritising the backlog around business value, while I ran delivery.</p>
+
+          <div class="sketch-note">
+            <p><strong style="color:var(--text);">Designing together, not for them:</strong> for every new feature, we
+              opened Excalidraw live in our meetings. Fiona and Kelly would describe how they wanted something to work,
+              and I'd sketch the wireframe with them in real time — turning a conversation into a shared visual
+              reference before a single line of code was written.</p>
+          </div>
+        </section>
+
+        <section id="role">
+          <div class="section-label">03 — My Role vs. Team's Role</div>
+          <h2>Scrum master and sole developer</h2>
+          <p class="lede">Fiona and Kelly owned the "what" and "why." I owned the "how" — end to end.</p>
+          <div class="role-split">
+            <div class="role-card mine">
+              <h3>I owned</h3>
+              <ul>
+                <li>Scrum facilitation — weekly meetings, sprint planning, backlog grooming</li>
+                <li>All coding, testing, and deployment</li>
+                <li>Requirements gathering from stakeholder conversations into user stories</li>
+                <li>Architecture and infrastructure decisions (AWS, RDS, auth, API security)</li>
+                <li>Meeting minutes and the ongoing user manual</li>
+                <li>Walking Fiona &amp; Kelly through every GitHub update personally</li>
+              </ul>
+            </div>
+            <div class="role-card theirs">
+              <h3>Fiona &amp; Kelly (Product Owners)</h3>
+              <ul>
+                <li>Defined requirements and business priorities</li>
+                <li>Prioritised the backlog to protect business value</li>
+                <li>Domain expertise on pantry operations and member needs</li>
+                <li>Reviewed and tested each release before rollout</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="process">
+          <div class="section-label">04 — Process &amp; Tools</div>
+          <h2>Keeping non-technical stakeholders inside the process</h2>
+          <p class="lede">We ran the whole build on a visible, shared Trello board — not just meeting updates. Fiona and
+            Kelly could check backlog status, in-progress work, and shipped features at any time, without waiting for
+            me.</p>
+          <div class="trello-strip">
+            <div class="trello-col todo">
+              <div class="trello-col-title">To do</div>
+              <div class="sticky">Add grace-period logic to scanner</div>
+              <div class="sticky">Quarterly report by housing association</div>
+            </div>
+            <div class="trello-col doing">
+              <div class="trello-col-title">Doing</div>
+              <div class="sticky">SMS templates for renewal reminders</div>
+            </div>
+            <div class="trello-col done">
+              <div class="trello-col-title">Done</div>
+              <div class="sticky">Member self-service profile + QR code</div>
+              <div class="sticky">Dashboard: active members graph</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features">
+          <div class="section-label">05 — Key Features</div>
+          <h2>What the system does</h2>
+
+          <div class="feature">
+            <div>
+              <div class="feature-num">Feature 01</div>
+              <h3>Membership database</h3>
+              <p>Searchable member records with editable profiles and status tracking. Staff can message one member or
+                broadcast SMS to targeted groups, using specific or generic templates.</p>
+            </div>
+
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/Members-database.png" alt="Database View 1" class="zoomable-image">
+              <img src="assets/images/sms-message.png" alt="Database View 2" class="zoomable-image">
+              <img src="assets/images/message-sms.jpg" alt="Database View 3" class="zoomable-image">
+            </div>
+          </div>
+
+          <div class="feature">
+            <div>
+              <div class="feature-num">Feature 02</div>
+              <h3>Automated onboarding</h3>
+              <p>New registration triggers a templated welcome email with membership rules, benefits, and a pantry
+                orientation video, plus an SMS with a direct link to the member's profile.</p>
+            </div>
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/Registration.png" alt="Database View 1" class="zoomable-image">
+              <img src="assets/images/First-part-of-template.png" alt="Database View 2" class="zoomable-image">
+              <img src="assets/images/Second-part-email.png" alt="Database View 3" class="zoomable-image">
+              <img src="assets/images/Last-part-email-video.png" alt="Database View 4" class="zoomable-image">
+            </div>
+          </div>
+
+          <div class="feature">
+            <div>
+              <div class="feature-num">Feature 03</div>
+              <h3>Multi-type shop scanner</h3>
+              <p>Scans a member's QR code to instantly verify status — active, in a grace period, or annual payment due.
+                Evolved to also handle non-members, signposted users, and charity-sponsored shopping payments in the
+                same flow.</p>
+            </div>
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/Scanning feature.jpg" alt="Database View 1" class="zoomable-image">
+              <img src="assets/images/Active-only.jpg" alt="Database View 2" class="zoomable-image">
+              <img src="assets/images/Expire-only.jpg" alt="Database View 3" class="zoomable-image">
+              <img src="assets/images/Multi payment.PNG" alt="Database View 4" class="zoomable-image">
+            </div>
+          </div>
+
+
+
+          <div class="feature">
+            <div>
+              <div class="feature-num">Feature 04</div>
+              <h3>Reporting</h3>
+              <p>Daily reporting, Weekly shop, Membership payment, annual payment, quarterly, and annual reports for
+                funders: new members, members per quarter, members by
+                housing association, member vs. non-member split, generated instantly instead of hand-compiled.</p>
+            </div>
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/Reports.png" alt="Database View 1" class="zoomable-image">
+              <img src="assets/images/Quarterly.png" alt="Database View 2" class="zoomable-image">
+            </div>
+          </div>
+
+          <div class="feature">
+            <div>
+              <div class="feature-num">Feature 05</div>
+              <h3>Dashboard</h3>
+              <p>Get clear, accessible insight into their daily, weekly, and monthly visitor trends, along with new
+                member sign-ups, total membership counts, and grouped dietary needs.</p>
+            </div>
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/Dashboard.png" alt="Database View 1" class="zoomable-image">
+            </div>
+          </div>
+
+          <div class="feature">
+            <div>
+              <div class="feature-num">Feature 06</div>
+              <h3>Member self-service profile</h3>
+              <p>Members access their unique profile to see their own membership status and personal QR code to make a
+                weekly shop, and can message pantry admins directly
+                with questions about other services.</p>
+            </div>
+            <div class="feature-media thumbnail-grid">
+              <img src="assets/images/communications.png" alt="Database View 1" class="zoomable-image">
+            </div>
+          </div>
+        </section>
+
+        <section id="technical">
+          <div class="section-label">06 — Technical Breakdown</div>
+          <h2>How it's built</h2>
+          <div class="tag-row">
+            <span class="tag">React</span>
+            <span class="tag">Redux</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">AWS EC2 + RDS</span>
+            <span class="tag">Firebase Auth</span>
+            <span class="tag">RBAC Security model</span>
+            <span class="tag">MUI</span>
+            <span class="tag">Dokploy (Suggested)</span>
+          </div>
+
+
+          <div class="decision">
+            <div class="k">Decision — UI Components</div>
+            <p>Used MUI (Material UI) to rapidly build and deploy consistent, accessible components
+              across the app. During my training at CodeYourFuture (Full Stack Web Developer Course) I was exposed to a
+              wide range of
+              technologies, and MUI was one of them it's now part of my go to stack and a key
+              part of my success as a developer.</p>
+          </div>
+          <div class="decision">
+            <div class="k">Decision — Database</div>
+            <p>Chose PostgreSQL because it's what I learned at CodeYourFuture, and I've since built
+              hands-on experience with it through real projects. It gave me a reliable, well
+              structured relational database to manage the app's data with confidence.</p>
+          </div>
+          <div class="decision">
+            <div class="k">Decision — State management</div>
+            <p>Chose Redux to manage complex, cross-cutting state across the scanner, membership, and
+              reporting modules — these all needed to stay perfectly in sync as staff moved
+              through their shift, so keeping state predictable was key. Learning to implement
+              Redux from the ground up was a valuable experience, and it's since become a
+              tool I'm confident using and glad to have in my skill set.</p>
+          </div>
+          <div class="decision">
+            <div class="k">Decision — Auth &amp; security</div>
+            <p>Implemented Firebase Authentication with secure token-based sessions; every single API endpoint is
+              protected
+              with server-side token verification rather than relying on client-side checks alone. Additionally, sign-up
+              and sign-in flows are fully managed through Firebase, ensuring consistent and reliable user authentication
+              across the entire application.</p>
+          </div>
+          <div class="decision">
+            <div class="k">Decision — Infrastructure evolution</div>
+            <p>Started on AWS free-tier (EC2 + RDS) to validate the MVP at zero cost. After the free year ended, Fiona
+              chose to pay for hosting directly — and we're having conversations of migrating to a VPS with Dokploy to
+              cut ongoing cost
+              while keeping the setup portable and reliable, mirroring the approach used on the Auldhouse project.</p>
+          </div>
+        </section>
+
+        <section id="impact">
+          <div class="section-label">07 — Impact</div>
+          <h2>What changed</h2>
+          <p class="lede">Launched publicly in May 2025 after running quietly in parallel with the old Excel process, so
+            staff could trust the new system before fully switching over.</p>
+          <div class="impact-grid">
+            <div class="impact-stat">
+              <div class="num">100%</div>
+              <div class="label">of manual Excel tracking replaced</div>
+            </div>
+            <div class="impact-stat">
+              <div class="num">4</div>
+              <div class="label">report cycles automated: daily → annual</div>
+            </div>
+            <div class="impact-stat">
+              <div class="num">2yr+</div>
+              <div class="label">in active production use</div>
+            </div>
+            <div class="impact-stat">
+              <div class="num">1</div>
+              <div class="label">client now funding hosting directly</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="reflection" style="border-bottom:none;">
+          <div class="reflection">
+            <h2>What I'd do differently</h2>
+            <p>Hosting cost wasn't planned for past the AWS free year — we're now migrating to a VPS with Dokploy for a
+              cheaper, more portable, more reliable setup. Next time, I'd model realistic post-trial hosting costs with
+              the client before launch, not after.</p>
+          </div>
+        </section>
+
+        <div class="footer-nav">
+          <a href="projects.html" class="back">← Back to all projects</a>
+          <a href="#">Next: Auldhouse →</a>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <dialog id="image-modal" class="lightbox full-screen-lightbox">
+    <button id="close-modal" aria-label="Close image">✕</button>
+    <button id="prev-btn" class="nav-arrow" aria-label="Previous image">❮</button>
+    <button id="next-btn" class="nav-arrow" aria-label="Next image">❯</button>
+    <div class="modal-track" id="modal-track"></div>
+  </dialog>
+  
+  <dialog id="feature-dialog" class="custom-dialog">
+      <div class="dialog-content">
+          <h3 id="dialog-title">Feature Notice</h3>
+          <p id="dialog-message">This feature is currently being built and will be available soon.</p>
+          <button id="close-feature-dialog" class="btn primary">Got it</button>
+      </div>
+  </dialog>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 Alejandro Alas. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://github.com/aalassv" target="_blank" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/alejandro-alas-/" target="_blank" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="mailto:a.alas.sv@gmail.com" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
