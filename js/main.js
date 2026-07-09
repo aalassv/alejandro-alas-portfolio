@@ -77,57 +77,124 @@ projectCards.forEach((card) => {
 });
 
 // --- Swipeable Image Lightbox (Popup) ---
-const imageModal = document.getElementById('image-modal');
-const modalTrack = document.getElementById('modal-track');
-const closeModalBtn = document.getElementById('close-modal');
-const featureContainers = document.querySelectorAll('.feature-media');
+const imageModal = document.getElementById("image-modal");
+const modalTrack = document.getElementById("modal-track");
+const closeModalBtn = document.getElementById("close-modal");
+const prevBtn = document.getElementById("prev-btn"); // New
+const nextBtn = document.getElementById("next-btn"); // New
+const featureContainers = document.querySelectorAll(".feature-media");
 
 if (imageModal && modalTrack && featureContainers.length > 0) {
-    featureContainers.forEach(container => {
-        const images = container.querySelectorAll('.zoomable-image');
-        
-        images.forEach((img, index) => {
-            img.addEventListener('click', () => {
-                // 1. Clear previous images from the modal
-                modalTrack.innerHTML = '';
-                
-                // 2. Load all images from this feature block into the modal carousel
-                images.forEach((sourceImg, i) => {
-                    const newImg = document.createElement('img');
-                    newImg.setAttribute('src', sourceImg.getAttribute('src'));
-                    newImg.setAttribute('alt', sourceImg.getAttribute('alt'));
-                    newImg.dataset.index = i; // Tag it with an index for scrolling
-                    modalTrack.appendChild(newImg);
-                });
+  featureContainers.forEach((container) => {
+    const images = container.querySelectorAll(".zoomable-image");
 
-                // 3. Lock background scroll and open modal
-                document.body.classList.add('no-scroll');
-                imageModal.showModal();
-                closeModalBtn.blur();
+    images.forEach((img, index) => {
+      img.addEventListener("click", () => {
+        modalTrack.innerHTML = "";
 
-                // 4. Instantly snap to the exact image the user clicked
-                setTimeout(() => {
-                    const target = modalTrack.querySelector(`[data-index="${index}"]`);
-                    if(target) {
-                        target.scrollIntoView({ behavior: 'instant', block: 'nearest', inline: 'center' });
-                    }
-                }, 10); // 10ms delay ensures the browser paints the DOM first
+        images.forEach((sourceImg, i) => {
+          const newImg = document.createElement("img");
+          newImg.setAttribute("src", sourceImg.getAttribute("src"));
+          newImg.setAttribute("alt", sourceImg.getAttribute("alt"));
+          newImg.dataset.index = i;
+          modalTrack.appendChild(newImg);
+        });
+
+        // Show arrows ONLY if there is more than 1 image
+        if (images.length > 1) {
+          prevBtn.style.display = "flex";
+          nextBtn.style.display = "flex";
+        } else {
+          prevBtn.style.display = "none";
+          nextBtn.style.display = "none";
+        }
+
+        document.body.classList.add("no-scroll");
+        imageModal.showModal();
+        closeModalBtn.blur();
+
+        setTimeout(() => {
+          const target = modalTrack.querySelector(`[data-index="${index}"]`);
+          if (target) {
+            target.scrollIntoView({
+              behavior: "instant",
+              block: "nearest",
+              inline: "center",
             });
+          }
+        }, 10);
+      });
+    });
+  });
+
+  const closeDialog = () => {
+    imageModal.close();
+    document.body.classList.remove("no-scroll");
+    modalTrack.innerHTML = "";
+  };
+
+  closeModalBtn.addEventListener("click", closeDialog);
+
+  modalTrack.addEventListener("click", (e) => {
+    if (e.target === modalTrack) {
+      closeDialog();
+    }
+  });
+
+  // Arrow Button Click Events
+  prevBtn.addEventListener("click", () => {
+    modalTrack.scrollBy({ left: -window.innerWidth, behavior: "smooth" });
+  });
+
+  nextBtn.addEventListener("click", () => {
+    modalTrack.scrollBy({ left: window.innerWidth, behavior: "smooth" });
+  });
+}
+
+// --- Feature Message Dialog ---
+const featureDialog = document.getElementById('feature-dialog');
+const closeFeatureDialogBtn = document.getElementById('close-feature-dialog');
+const featureButtons = document.querySelectorAll('.trigger-feature-dialog');
+const dialogMessageElement = document.getElementById('dialog-message'); // The <p> tag inside the dialog
+
+if (featureDialog) {
+    // 1. Open dialog when any trigger button is clicked
+    featureButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevents the link from jumping to the top of the page
+            
+            // Look for a custom message on the button, otherwise use a default
+            const customMessage = btn.getAttribute('data-message');
+            if (customMessage && dialogMessageElement) {
+                dialogMessageElement.innerText = customMessage;
+            } else if (dialogMessageElement) {
+                dialogMessageElement.innerText = "This feature is currently being built and will be available soon.";
+            }
+
+            document.body.classList.add('no-scroll');
+            featureDialog.showModal();
         });
     });
 
-    const closeDialog = () => {
-        imageModal.close();
+    // 2. Function to close the dialog
+    const closeFeatureDialog = () => {
+        featureDialog.close();
         document.body.classList.remove('no-scroll');
-        modalTrack.innerHTML = ''; // Clean up track memory
     };
 
-    closeModalBtn.addEventListener('click', closeDialog);
+    // 3. Close on button click
+    closeFeatureDialogBtn.addEventListener('click', closeFeatureDialog);
 
-    // Close when clicking empty space in the modal (but not the image itself)
-    modalTrack.addEventListener('click', (e) => {
-        if (e.target === modalTrack) {
-            closeDialog();
+    // 4. Close when clicking the dark backdrop outside the dialog box
+    featureDialog.addEventListener('click', (e) => {
+        const dialogDimensions = featureDialog.getBoundingClientRect();
+        if (
+            e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom
+        ) {
+            closeFeatureDialog();
         }
     });
 }

@@ -48,7 +48,8 @@
     <div class="hero">
       <div class="eyebrow">Case Study · Software Engineering</div>
       <h1>Castlemilk Pantry</h1>
-      <p class="tagline">A membership, eligibility-check, and reporting platform built for a community food pantry
+      <p class="tagline">A membership app, shop eligibility-check, and reporting platform built for a community food
+        pantry
         replacing manual spreadsheets with digital QR check-ins and automated SMS.</p>
       <div class="status-row">
         <span class="badge live">● Live in production</span>
@@ -57,8 +58,11 @@
         <span class="badge">350+ members</span>
       </div>
       <div class="hero-actions">
-        <a href="#" class="btn primary">View Live Site</a>
-        <a href="#" class="btn secondary">Code Sample</a>
+        <a href="#" class="btn primary trigger-feature-dialog"
+          data-message="The live site is currently undergoing deployment. Check back soon!">View Live Site</a>
+        <a href="#" class="btn secondary trigger-feature-dialog"
+          data-message="The code repository is currently being cleaned up and will be made public shortly.">Code
+          Sample</a>
         <a href="projects.html" class="btn secondary">← All Projects</a>
       </div>
     </div>
@@ -190,7 +194,7 @@
               <img src="assets/images/Members-database.png" alt="Database View 1" class="zoomable-image">
               <img src="assets/images/sms-message.png" alt="Database View 2" class="zoomable-image">
               <img src="assets/images/message-sms.jpg" alt="Database View 3" class="zoomable-image">
-            </div>  
+            </div>
           </div>
 
           <div class="feature">
@@ -230,7 +234,8 @@
             <div>
               <div class="feature-num">Feature 04</div>
               <h3>Reporting</h3>
-              <p>Daily reporting, Weekly shop, Membership payment, annual payment, quarterly, and annual reports for funders: new members, members per quarter, members by
+              <p>Daily reporting, Weekly shop, Membership payment, annual payment, quarterly, and annual reports for
+                funders: new members, members per quarter, members by
                 housing association, member vs. non-member split, generated instantly instead of hand-compiled.</p>
             </div>
             <div class="feature-media thumbnail-grid">
@@ -243,7 +248,8 @@
             <div>
               <div class="feature-num">Feature 05</div>
               <h3>Dashboard</h3>
-              <p>Get clear, accessible insight into their daily, weekly, and monthly visitor trends, along with new member sign-ups, total membership counts, and grouped dietary needs.</p>
+              <p>Get clear, accessible insight into their daily, weekly, and monthly visitor trends, along with new
+                member sign-ups, total membership counts, and grouped dietary needs.</p>
             </div>
             <div class="feature-media thumbnail-grid">
               <img src="assets/images/Dashboard.png" alt="Database View 1" class="zoomable-image">
@@ -254,7 +260,8 @@
             <div>
               <div class="feature-num">Feature 06</div>
               <h3>Member self-service profile</h3>
-              <p>Members access their unique profile to see their own membership status and personal QR code to make a weekly shop, and can message pantry admins directly
+              <p>Members access their unique profile to see their own membership status and personal QR code to make a
+                weekly shop, and can message pantry admins directly
                 with questions about other services.</p>
             </div>
             <div class="feature-media thumbnail-grid">
@@ -278,20 +285,42 @@
             <span class="tag">Dokploy (Suggested)</span>
           </div>
 
+
+          <div class="decision">
+            <div class="k">Decision — UI Components</div>
+            <p>Used MUI (Material UI) to rapidly build and deploy consistent, accessible components
+              across the app. During my training at CodeYourFuture (Full Stack Web Developer Course) I was exposed to a
+              wide range of
+              technologies, and MUI was one of them it's now part of my go to stack and a key
+              part of my success as a developer.</p>
+          </div>
+          <div class="decision">
+            <div class="k">Decision — Database</div>
+            <p>Chose PostgreSQL because it's what I learned at CodeYourFuture, and I've since built
+              hands-on experience with it through real projects. It gave me a reliable, well
+              structured relational database to manage the app's data with confidence.</p>
+          </div>
           <div class="decision">
             <div class="k">Decision — State management</div>
-            <p>Chose Redux to manage complex, cross-cutting state across the scanner, membership, and reporting modules,
-              which all needed to stay in sync as staff worked through a shift.</p>
+            <p>Chose Redux to manage complex, cross-cutting state across the scanner, membership, and
+              reporting modules — these all needed to stay perfectly in sync as staff moved
+              through their shift, so keeping state predictable was key. Learning to implement
+              Redux from the ground up was a valuable experience, and it's since become a
+              tool I'm confident using and glad to have in my skill set.</p>
           </div>
           <div class="decision">
             <div class="k">Decision — Auth &amp; security</div>
-            <p>Used Firebase Auth with token-based sessions; every single API endpoint is protected with token
-              verification rather than relying on client-side checks. As well Sign up and Sign is managed n use</p>
+            <p>Implemented Firebase Authentication with secure token-based sessions; every single API endpoint is
+              protected
+              with server-side token verification rather than relying on client-side checks alone. Additionally, sign-up
+              and sign-in flows are fully managed through Firebase, ensuring consistent and reliable user authentication
+              across the entire application.</p>
           </div>
           <div class="decision">
             <div class="k">Decision — Infrastructure evolution</div>
             <p>Started on AWS free-tier (EC2 + RDS) to validate the MVP at zero cost. After the free year ended, Fiona
-              chose to pay for hosting directly — and we're now migrating to a VPS with Dokploy to cut ongoing cost
+              chose to pay for hosting directly — and we're having conversations of migrating to a VPS with Dokploy to
+              cut ongoing cost
               while keeping the setup portable and reliable, mirroring the approach used on the Auldhouse project.</p>
           </div>
         </section>
@@ -337,9 +366,20 @@
       </main>
     </div>
   </div>
+
   <dialog id="image-modal" class="lightbox full-screen-lightbox">
     <button id="close-modal" aria-label="Close image">✕</button>
+    <button id="prev-btn" class="nav-arrow" aria-label="Previous image">❮</button>
+    <button id="next-btn" class="nav-arrow" aria-label="Next image">❯</button>
     <div class="modal-track" id="modal-track"></div>
+  </dialog>
+  
+  <dialog id="feature-dialog" class="custom-dialog">
+      <div class="dialog-content">
+          <h3 id="dialog-title">Feature Notice</h3>
+          <p id="dialog-message">This feature is currently being built and will be available soon.</p>
+          <button id="close-feature-dialog" class="btn primary">Got it</button>
+      </div>
   </dialog>
   <footer class="footer">
     <div class="footer-content">

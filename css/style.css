@@ -234,7 +234,7 @@ body {
 }
 
 .apple-card {
-    background-color: var(--bg-color);
+    background-color: var(--card);
     border: 1px solid var(--border-color);
     border-radius: 24px;
     overflow: hidden;
@@ -242,7 +242,7 @@ body {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     min-height: 450px;
     cursor: pointer;
 }
@@ -292,7 +292,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-color: var(--border-color);
+    background-color: var(--card-alt);
 }
 
 .card-image {
@@ -556,12 +556,20 @@ nav {
 }
 
 .btn.primary {
-    background: #FFFFFF;
-    color: #0A0A0A;
+    background: var(--accent-color);
+    color: #FFFFFF;
 }
 
 .btn.primary:hover {
-    background: #E5E5E5;
+    filter: brightness(1.1);
+}
+
+[data-theme="dark"] .btn.primary {
+    background: #2563EB;
+}
+
+[data-theme="dark"] .btn.primary:hover {
+    background: #3b76f0;
 }
 
 .btn.secondary {
@@ -1079,4 +1087,75 @@ section h2 {
 
 .no-scroll {
     overflow: hidden;
+}
+/* --- Lightbox Navigation Arrows --- */
+.nav-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(4px); /* Frosty glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 100;
+    display: none; /* Hidden by default; JS will turn them on */
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.nav-arrow:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-50%) scale(1.1);
+}
+
+#prev-btn {
+    left: 20px;
+}
+
+#next-btn {
+    right: 20px;
+}
+
+/* --- Custom Message Dialog --- */
+.custom-dialog {
+    background-color: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 400px;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.custom-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.custom-dialog .dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    align-items: center;
+}
+
+.custom-dialog h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.custom-dialog p {
+    color: var(--muted);
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
 }
