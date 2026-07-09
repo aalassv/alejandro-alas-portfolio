@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (hamburgerBtn && navLinks) {
     hamburgerBtn.addEventListener("click", () => {
-      // Toggles the 'show' class to open/close the menu
       navLinks.classList.toggle("show");
     });
   }
@@ -53,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     };
     window.addEventListener("scroll", setActive);
-    setActive(); //
+    setActive();
   }
 });
 
@@ -80,8 +79,8 @@ projectCards.forEach((card) => {
 const imageModal = document.getElementById("image-modal");
 const modalTrack = document.getElementById("modal-track");
 const closeModalBtn = document.getElementById("close-modal");
-const prevBtn = document.getElementById("prev-btn"); // New
-const nextBtn = document.getElementById("next-btn"); // New
+const prevBtn = document.getElementById("prev-btn");
+const nextBtn = document.getElementById("next-btn");
 const featureContainers = document.querySelectorAll(".feature-media");
 
 if (imageModal && modalTrack && featureContainers.length > 0) {
@@ -100,7 +99,6 @@ if (imageModal && modalTrack && featureContainers.length > 0) {
           modalTrack.appendChild(newImg);
         });
 
-        // Show arrows ONLY if there is more than 1 image
         if (images.length > 1) {
           prevBtn.style.display = "flex";
           nextBtn.style.display = "flex";
@@ -141,7 +139,6 @@ if (imageModal && modalTrack && featureContainers.length > 0) {
     }
   });
 
-  // Arrow Button Click Events
   prevBtn.addEventListener("click", () => {
     modalTrack.scrollBy({ left: -window.innerWidth, behavior: "smooth" });
   });
@@ -155,15 +152,11 @@ if (imageModal && modalTrack && featureContainers.length > 0) {
 const featureDialog = document.getElementById('feature-dialog');
 const closeFeatureDialogBtn = document.getElementById('close-feature-dialog');
 const featureButtons = document.querySelectorAll('.trigger-feature-dialog');
-const dialogMessageElement = document.getElementById('dialog-message'); // The <p> tag inside the dialog
-
+const dialogMessageElement = document.getElementById('dialog-message'); 
 if (featureDialog) {
-    // 1. Open dialog when any trigger button is clicked
     featureButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevents the link from jumping to the top of the page
-            
-            // Look for a custom message on the button, otherwise use a default
+            e.preventDefault(); 
             const customMessage = btn.getAttribute('data-message');
             if (customMessage && dialogMessageElement) {
                 dialogMessageElement.innerText = customMessage;
@@ -176,16 +169,13 @@ if (featureDialog) {
         });
     });
 
-    // 2. Function to close the dialog
     const closeFeatureDialog = () => {
         featureDialog.close();
         document.body.classList.remove('no-scroll');
     };
 
-    // 3. Close on button click
     closeFeatureDialogBtn.addEventListener('click', closeFeatureDialog);
 
-    // 4. Close when clicking the dark backdrop outside the dialog box
     featureDialog.addEventListener('click', (e) => {
         const dialogDimensions = featureDialog.getBoundingClientRect();
         if (
