@@ -44,17 +44,16 @@
     <!-- Case Study Content -->
     <div class="wrap">
       <div class="hero">
-        <div class="eyebrow">Case Study · Software Engineering</div>
+        <div class="eyebrow">Case Study · Full Stack Development</div>
         <h1>Auldhouse Community Church</h1>
-        <p class="tagline">A membership, eligibility-check, and reporting platform built for a community food pantry — replacing manual spreadsheets with digital QR check-ins and automated SMS.</p>
-        <p class="tagline">A membership app, shop eligibility-check, and reporting platform built for a community food
-        pantry
-        replacing manual spreadsheets with digital QR check-ins and automated SMS.</p>
+        <p class="tagline">An attendance and cycle-verification system built for a church food bank replacing
+          loose paper registers and doorway queues with instant lookups, automated reporting, and a self-managed
+          VPS deployment.</p>
       <div class="status-row">
         <span class="badge live">● Live in production</span>
-        <span class="badge">Launched May 2025</span>
-        <span class="badge">Mar 2023 → Present</span>
-        <span class="badge">350+ members</span>
+        <span class="badge">Launched Jul 2024</span>
+        <span class="badge">Jun 2023 → Present</span>
+        <span class="badge">Migrated AWS EC2 → VPS</span>
       </div>
       <div class="hero-actions">
         <a href="#" class="btn primary trigger-feature-dialog"
@@ -83,71 +82,78 @@
         <section id="overview">
           <div class="section-label">01 — Overview</div>
           <h2>Background</h2>
-          <p class="lede">Castlemilk Pantry is a community food pantry supporting local members through subsidised
-            shopping. Before this system existed, every part of running it, registering members, checking weekly shop
-            eligibility,
-            tracking user shops, and reporting to funders — was done by hand.</p>
+          <p class="lede">Auldhouse Community Church runs a food bank that hundreds of people rely on. Before this
+            system existed, everything ran on paper: a person at the door checked loose, hand-updated sheets every
+            Thursday to see whether each visitor was in the right cycle to collect a parcel 1, 2, 3 or 4 weeks apart
+            depending on the household. That manual check created long queues, with people waiting outside in the
+            rain while staff cross-referenced names by hand.</p>
           <div class="meta-grid">
             <div class="meta-card">
               <div class="k">Client</div>
-              <div class="v">Castlemilk Pantry</div>
+              <div class="v">Auldhouse Community Church Food Bank</div>
             </div>
             <div class="meta-card">
               <div class="k">Timeline</div>
-              <div class="v">Mar 2023 – May 2025 launch</div>
+              <div class="v">Jun 2023 – Jul 2024 launch, ongoing</div>
             </div>
             <div class="meta-card">
               <div class="k">Team</div>
-              <div class="v">Me + 2 Product Owners</div>
+              <div class="v">Me + Leadership (Claire, then Roma Madden)</div>
             </div>
           </div>
         </section>
 
         <section id="origin">
           <div class="section-label">02 — How It Started</div>
-          <h2>I was a user before I was the developer</h2>
-          <p class="lede">I used the pantry myself and saw the daily burden firsthand: staff manually registering users
-            and checking, sheet by sheet, whether each person was eligible to shop that day. At the end of every day,
-            week, month, and quarter, someone had to turn that paperwork into reports for funders, hours of work that
-            should have gone toward the community instead.</p>
-          <p class="lede" style="margin-top:14px;">I offered to help as a newly qualified full-stack developer. We met
-            so I could introduce myself properly and bring an early dashboard mockup to that first conversation. Once we
-            agreed to move forward, we signed a Data Protection Impact Assessment before any development began.</p>
-          <p class="lede" style="margin-top:14px;">I introduced the agile approach I'd learned on my CodeYourFuture
-            final project (Bikes for Refugees), giving Fiona and Kelly the Product Owner role defining requirements
-            and prioritising the backlog around business value, while I ran delivery.</p>
+          <h2>I was a food bank user before I was the developer</h2>
+          <p class="lede">Every first Thursday of the month, I collected my own parcel from Auldhouse, standing in the
+            same queue as everyone else. Over time I saw exactly how the process worked and where it broke down.
+            Someone at the door checked hundreds of names against hand-updated paper sheets to confirm each person's
+            cycle, and anyone whose file wasn't current, or who arrived outside their cycle, had to be sorted out on
+            the spot. That created long queues and real discontent, with people left standing outside in the rain.</p>
+          <p class="lede" style="margin-top:14px;">I used that standing as a member of the community to build trust
+            with the pastor and the food bank director, and proposed a digital system that could gradually remove the
+            queues, cut the hours spent on Excel updates and printing, and simplify reporting to funders. To help make
+            the case, I pointed to Castlemilk Pantry a similar project I already had underway, at the requirements
+            stage at the time as proof I could deliver this. They agreed.</p>
+          <p class="lede" style="margin-top:14px;">We settled into a monthly meeting cadence, and I brought an early
+            mockup of what the app could look like to guide those first conversations. Requirements were first
+            prioritised with Claire, who initiated the project on the food bank's side before she left; Roma Madden
+            then took over food bank leadership and carried requirements gathering forward with me from there.</p>
 
           <div class="sketch-note">
-            <p><strong style="color:var(--text);">Designing together, not for them:</strong> for every new feature, we
-              opened Excalidraw live in our meetings. Fiona and Kelly would describe how they wanted something to work,
-              and I'd sketch the wireframe with them in real time — turning a conversation into a shared visual
-              reference before a single line of code was written.</p>
+            <p><strong style="color:var(--text);">A different priority list than Castlemilk:</strong> Roma's biggest
+              ask was simplicity a membership database and a straightforward registration process, with no SMS or
+              email needed for food bank users. The feature that mattered most was the one that had been draining the
+              most staff time: instantly looking up a visitor and confirming, in one click, whether they were within
+              their cycle or needed an emergency parcel.</p>
           </div>
         </section>
 
         <section id="role">
           <div class="section-label">03 — My Role vs. Team's Role</div>
-          <h2>Scrum master and sole developer</h2>
-          <p class="lede">Fiona and Kelly owned the "what" and "why." I owned the "how" — end to end.</p>
+          <h2>Sole developer, from requirements to VPS</h2>
+          <p class="lede">Claire and Roma owned the "what" and "why," across a leadership handover partway through.
+            I owned the "how" end to end, including the later migration off AWS.</p>
           <div class="role-split">
             <div class="role-card mine">
               <h3>I owned</h3>
               <ul>
-                <li>Scrum facilitation — weekly meetings, sprint planning, backlog grooming</li>
+                <li>Monthly requirements meetings and mockups with food bank leadership</li>
                 <li>All coding, testing, and deployment</li>
-                <li>Requirements gathering from stakeholder conversations into user stories</li>
-                <li>Architecture and infrastructure decisions (AWS, RDS, auth, API security)</li>
-                <li>Meeting minutes and the ongoing user manual</li>
-                <li>Walking Fiona &amp; Kelly through every GitHub update personally</li>
+                <li>Translating stakeholder conversations into technical requirements</li>
+                <li>Auth &amp; authorization architecture (Firebase Auth, RBAC, token-protected APIs)</li>
+                <li>Migrating hosting from AWS EC2 to a self-managed VPS with Docker and Dokploy</li>
+                <li>Linux server administration and backup automation</li>
               </ul>
             </div>
             <div class="role-card theirs">
-              <h3>Fiona &amp; Kelly (Product Owners)</h3>
+              <h3>Claire → Roma Madden (Foodbank Leadership) &amp; Pastor</h3>
               <ul>
-                <li>Defined requirements and business priorities</li>
-                <li>Prioritised the backlog to protect business value</li>
-                <li>Domain expertise on pantry operations and member needs</li>
-                <li>Reviewed and tested each release before rollout</li>
+                <li>Claire initiated the project and set the first requirements, before leaving the role</li>
+                <li>Roma Madden took over leadership and re-prioritised requirements around attendance tracking</li>
+                <li>Pastor provided organisational buy-in to move forward</li>
+                <li>Domain expertise on food bank operations and visitor cycles</li>
               </ul>
             </div>
           </div>
@@ -155,26 +161,12 @@
 
         <section id="process">
           <div class="section-label">04 — Process &amp; Tools</div>
-          <h2>Keeping non-technical stakeholders inside the process</h2>
-          <p class="lede">We ran the whole build on a visible, shared Trello board — not just meeting updates. Fiona and
-            Kelly could check backlog status, in-progress work, and shipped features at any time, without waiting for
-            me.</p>
-          <div class="trello-strip">
-            <div class="trello-col todo">
-              <div class="trello-col-title">To do</div>
-              <div class="sticky">Add grace-period logic to scanner</div>
-              <div class="sticky">Quarterly report by housing association</div>
-            </div>
-            <div class="trello-col doing">
-              <div class="trello-col-title">Doing</div>
-              <div class="sticky">SMS templates for renewal reminders</div>
-            </div>
-            <div class="trello-col done">
-              <div class="trello-col-title">Done</div>
-              <div class="sticky">Member self-service profile + QR code</div>
-              <div class="sticky">Dashboard: active members graph</div>
-            </div>
-          </div>
+          <h2>A monthly cadence built around volunteer availability</h2>
+          <p class="lede">Unlike a weekly sprint model, Auldhouse's leadership could only meet once a month, so I
+            structured requirements gathering and reviews around that rhythm bringing an updated mockup or working
+            build to each session rather than smaller, more frequent check-ins. When leadership handed over from
+            Claire to Roma Madden mid-project, I used that same monthly meeting structure to re-confirm priorities
+            with the new stakeholder rather than assuming continuity.</p>
         </section>
 
         <section id="features">
@@ -184,62 +176,55 @@
           <div class="feature">
             <div>
               <div class="feature-num">Feature 01</div>
-              <h3>Membership database</h3>
-              <p>Searchable member records with editable profiles and status tracking. Staff can message one member or
-                broadcast SMS to targeted groups, using specific or generic templates.</p>
+              <h3>Attendance &amp; cycle verification lookup</h3>
+              <p>The most time-consuming problem the old paper system had: staff needed to instantly confirm whether
+                a visitor was due their parcel. This feature lets staff look up a food bank user, see their name,
+                date of last visit, date of next eligible visit, and cycle (1, 2, 3 or 4 weeks), if they are not members register them rapidly
+                and then mark attendance with a single selection. If someone arrives early or outside their cycle, 
+                the system flags and records it as an emergency provision instead of turning them away.</p>
             </div>
-
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Members-database.png" alt="Database View 1" class="zoomable-image">
-              <img src="assets/images/sms-message.png" alt="Database View 2" class="zoomable-image">
-              <img src="assets/images/message-sms.jpg" alt="Database View 3" class="zoomable-image">
+              <img src="assets/images/Auldhouse/Registering-users.png" alt="Attendance lookup view" class="zoomable-image">
+              <img src="assets/images/Auldhouse/New-user.png" alt="New user registration view" class="zoomable-image">
             </div>
           </div>
 
           <div class="feature">
             <div>
               <div class="feature-num">Feature 02</div>
-              <h3>Automated onboarding</h3>
-              <p>New registration triggers a templated welcome email with membership rules, benefits, and a pantry
-                orientation video, plus an SMS with a direct link to the member's profile.</p>
+              <h3>Membership database</h3>
+              <p>A simple, searchable database of food bank users replacing the loose paper sheets previously used to
+                track hundreds of households. No SMS or email is built in for this client, Roma prioritised a
+                straightforward record system over communication features.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Registration.png" alt="Database View 1" class="zoomable-image">
-              <img src="assets/images/First-part-of-template.png" alt="Database View 2" class="zoomable-image">
-              <img src="assets/images/Second-part-email.png" alt="Database View 3" class="zoomable-image">
-              <img src="assets/images/Last-part-email-video.png" alt="Database View 4" class="zoomable-image">
+              <img src="assets/images/Auldhouse/Registering.png" alt="Membership database view" class="zoomable-image">
             </div>
           </div>
+
 
           <div class="feature">
             <div>
               <div class="feature-num">Feature 03</div>
-              <h3>Multi-type shop scanner</h3>
-              <p>Scans a member's QR code to instantly verify status — active, in a grace period, or annual payment due.
-                Evolved to also handle non-members, signposted users, and charity-sponsored shopping payments in the
-                same flow.</p>
+              <h3>Reporting</h3>
+              <p>Weekly, monthly, and annual reports for funders, plus a downloadable Excel export listing every
+                visitor for a given week generated instantly instead of compiled by hand at the end of each
+                reporting period.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Scanning feature.jpg" alt="Database View 1" class="zoomable-image">
-              <img src="assets/images/Active-only.jpg" alt="Database View 2" class="zoomable-image">
-              <img src="assets/images/Expire-only.jpg" alt="Database View 3" class="zoomable-image">
-              <img src="assets/images/Multi payment.PNG" alt="Database View 4" class="zoomable-image">
+              <img src="assets/images/Auldhouse/Report visits per week and export feature.png" alt="Reports view" class="zoomable-image">
             </div>
           </div>
-
-
 
           <div class="feature">
             <div>
               <div class="feature-num">Feature 04</div>
-              <h3>Reporting</h3>
-              <p>Daily reporting, Weekly shop, Membership payment, annual payment, quarterly, and annual reports for
-                funders: new members, members per quarter, members by
-                housing association, member vs. non-member split, generated instantly instead of hand-compiled.</p>
+              <h3>Automated weekly digest email</h3>
+              <p>Every Thursday, an automated email is sent to the food bank director with the complete list of that
+                week's visitors removing the need to manually compile attendance at the end of each session.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Reports.png" alt="Database View 1" class="zoomable-image">
-              <img src="assets/images/Quarterly.png" alt="Database View 2" class="zoomable-image">
+              <img src="assets/images/Auldhouse/select any week needed to the email.png" alt="Weekly digest email" class="zoomable-image">
             </div>
           </div>
 
@@ -247,24 +232,11 @@
             <div>
               <div class="feature-num">Feature 05</div>
               <h3>Dashboard</h3>
-              <p>Get clear, accessible insight into their daily, weekly, and monthly visitor trends, along with new
-                member sign-ups, total membership counts, and grouped dietary needs.</p>
+              <p>A clear view of visitors and their household register, broken down weekly and monthly, alongside
+                monthly visitor totals giving leadership visibility they never had with paper records.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Dashboard.png" alt="Database View 1" class="zoomable-image">
-            </div>
-          </div>
-
-          <div class="feature">
-            <div>
-              <div class="feature-num">Feature 06</div>
-              <h3>Member self-service profile</h3>
-              <p>Members access their unique profile to see their own membership status and personal QR code to make a
-                weekly shop, and can message pantry admins directly
-                with questions about other services.</p>
-            </div>
-            <div class="feature-media thumbnail-grid">
-              <img src="assets/images/communications.png" alt="Database View 1" class="zoomable-image">
+              <img src="assets/images/Auldhouse/Dashboard.png" alt="Dashboard view" class="zoomable-image">
             </div>
           </div>
         </section>
@@ -274,77 +246,60 @@
           <h2>How it's built</h2>
           <div class="tag-row">
             <span class="tag">React</span>
-            <span class="tag">Redux</span>
             <span class="tag">Node.js</span>
             <span class="tag">PostgreSQL</span>
-            <span class="tag">AWS EC2 + RDS</span>
             <span class="tag">Firebase Auth</span>
             <span class="tag">RBAC Security model</span>
-            <span class="tag">MUI</span>
-            <span class="tag">Dokploy (Suggested)</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Dokploy</span>
+            <span class="tag">Self-managed VPS</span>
           </div>
 
-
           <div class="decision">
-            <div class="k">Decision — UI Components</div>
-            <p>Used MUI (Material UI) to rapidly build and deploy consistent, accessible components
-              across the app. During my training at CodeYourFuture (Full Stack Web Developer Course) I was exposed to a
-              wide range of
-              technologies, and MUI was one of them it's now part of my go to stack and a key
-              part of my success as a developer.</p>
+            <div class="k">Decision — Auth &amp; authorization</div>
+            <p>Implemented Firebase Authentication for login and sign-up, with secure token-based sessions and
+              every API endpoint protected by server-side verification. On top of that, I built a Role-Based Access
+              Control (RBAC) model so different staff roles get different levels of access — the same authorization
+              pattern I reused across this project and Castlemilk.</p>
           </div>
           <div class="decision">
-            <div class="k">Decision — Database</div>
-            <p>Chose PostgreSQL because it's what I learned at CodeYourFuture, and I've since built
-              hands-on experience with it through real projects. It gave me a reliable, well
-              structured relational database to manage the app's data with confidence.</p>
+            <div class="k">Decision — Requirements shift with leadership change</div>
+            <p>When Roma Madden took over food bank leadership from Claire, priorities shifted toward a lighter,
+              attendance-first tool rather than the fuller membership/communication feature set on Castlemilk.
+              Designing the system to flex around a change in stakeholder without a full rebuild was one of the
+              more valuable lessons from this project.</p>
           </div>
           <div class="decision">
-            <div class="k">Decision — State management</div>
-            <p>Chose Redux to manage complex, cross-cutting state across the scanner, membership, and
-              reporting modules — these all needed to stay perfectly in sync as staff moved
-              through their shift, so keeping state predictable was key. Learning to implement
-              Redux from the ground up was a valuable experience, and it's since become a
-              tool I'm confident using and glad to have in my skill set.</p>
-          </div>
-          <div class="decision">
-            <div class="k">Decision — Auth &amp; security</div>
-            <p>Implemented Firebase Authentication with secure token-based sessions; every single API endpoint is
-              protected
-              with server-side token verification rather than relying on client-side checks alone. Additionally, sign-up
-              and sign-in flows are fully managed through Firebase, ensuring consistent and reliable user authentication
-              across the entire application.</p>
-          </div>
-          <div class="decision">
-            <div class="k">Decision — Infrastructure evolution</div>
-            <p>Started on AWS free-tier (EC2 + RDS) to validate the MVP at zero cost. After the free year ended, Fiona
-              chose to pay for hosting directly — and we're having conversations of migrating to a VPS with Dokploy to
-              cut ongoing cost
-              while keeping the setup portable and reliable, mirroring the approach used on the Auldhouse project.</p>
+            <div class="k">Decision — Migrating off AWS EC2</div>
+            <p>The site and data services originally ran on AWS EC2. As costs became a concern for the church, I
+              migrated everything to a self-managed VPS using Docker and Dokploy an approach I learned by attending
+              a Codebar workshop specifically to find a cheaper deployment path. The move cut ongoing hosting costs
+              and made deployments, maintenance, and backups noticeably easier to manage. It strengthened my
+              hands-on experience with containerisation, Linux server administration, and backup automation.</p>
           </div>
         </section>
 
         <section id="impact">
           <div class="section-label">07 — Impact</div>
           <h2>What changed</h2>
-          <p class="lede">Launched publicly in May 2025 after running quietly in parallel with the old Excel process, so
-            staff could trust the new system before fully switching over.</p>
+          <p class="lede">Launched July 2024, replacing a paper-based doorway check that had run for years and caused
+            real discontent among people already dealing with hardship.</p>
           <div class="impact-grid">
             <div class="impact-stat">
               <div class="num">100%</div>
-              <div class="label">of manual Excel tracking replaced</div>
+              <div class="label">of paper cycle-tracking sheets replaced</div>
             </div>
             <div class="impact-stat">
               <div class="num">4</div>
-              <div class="label">report cycles automated: daily → annual</div>
+              <div class="label">visit cycles supported: 1 / 2 / 3 / 4 week</div>
             </div>
             <div class="impact-stat">
               <div class="num">2yr+</div>
-              <div class="label">in active production use</div>
+              <div class="label">in active production use since Jul 2024</div>
             </div>
             <div class="impact-stat">
-              <div class="num">1</div>
-              <div class="label">client now funding hosting directly</div>
+              <div class="num">EC2→VPS</div>
+              <div class="label">hosting migrated to cut ongoing costs</div>
             </div>
           </div>
         </section>
@@ -352,18 +307,22 @@
         <section id="reflection" style="border-bottom:none;">
           <div class="reflection">
             <h2>What I'd do differently</h2>
-            <p>Hosting cost wasn't planned for past the AWS free year — we're now migrating to a VPS with Dokploy for a
-              cheaper, more portable, more reliable setup. Next time, I'd model realistic post-trial hosting costs with
-              the client before launch, not after.</p>
+            <p>The leadership handover from Claire to Roma cost some rework, since requirements had to be
+              re-confirmed partway through. Next time, I'd document a lighter "minimum feature set" upfront, so a
+              change in stakeholder leadership costs less rebuilding. I'd also plan the AWS-to-VPS hosting migration
+              earlier — we're now planning a more updated visual version of the app on the same self-managed
+              infrastructure.</p>
           </div>
         </section>
 
         <div class="footer-nav">
-          <a href="projects.html" class="back">← Back to all projects</a>
-          <a href="#">Next: Auldhouse →</a>
+          <a href="../projects.html" class="back">← Back to all projects</a>
+          <a href="projects_case_Castlemilk_Pantry.html">← Previous: Castlemilk Pantry</a>
+          <a href="projects_case_Bike_for_refugees.html" class="next">Next: Bikes for Refugees →</a>
         </div>
       </main>
     </div>
+
   </div>
 
   <dialog id="image-modal" class="lightbox full-screen-lightbox">
