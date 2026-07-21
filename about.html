@@ -3,26 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Alejandro Alas — Full-Stack Developer in Scotland with 16 years of infrastructure experience, specializing in React, Node.js, and PostgreSQL.">
     <title>About | Alejandro Alas</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://aalas-dev.netlify.app/about.html">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="About | Alejandro Alas">
+    <meta property="og:description"
+        content="Alejandro Alas — Full-Stack Developer in Scotland with 16 years of infrastructure experience, specializing in React, Node.js, and PostgreSQL.">
+    <meta property="og:url" content="https://aalas-dev.netlify.app/about.html">
+    <meta property="og:image" content="https://aalas-dev.netlify.app/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="navbar">
         <div class="logo">
-            <a href="index.html">✦ Alejandro Alas</a>
+            <a href="/index.html">✦ Alejandro Alas</a>
         </div>
         <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a> <!-- Update active class per page -->
-            <a href="about.html" class="active">About</a>
+            <a href="/index.html">Home</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/about.html" class="active">About</a>
         </nav>
         <div class="nav-controls">
-            <button id="theme-toggle" class="theme-btn">
+                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark theme">
                 <span class="theme-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -96,7 +111,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js?v=1"></script>
 </body>
 
 </html>

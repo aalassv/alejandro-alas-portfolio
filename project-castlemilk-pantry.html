@@ -3,9 +3,26 @@
 
 <head>
   <meta charset="UTF-8">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Case study: a membership platform built for Castlemilk Pantry with PostgreSQL, Express, React and Node.js, replacing manual spreadsheets with QR check-ins and automated SMS.">
   <title>Castlemilk Pantry — Case Study | Alejandro Alas</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://aalas-dev.netlify.app/project-castlemilk-pantry.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Castlemilk Pantry — Case Study | Alejandro Alas">
+  <meta property="og:description"
+    content="A membership platform built for Castlemilk Pantry with PostgreSQL, Express, React and Node.js, replacing manual spreadsheets with QR check-ins and automated SMS.">
+  <meta property="og:url" content="https://aalas-dev.netlify.app/project-castlemilk-pantry.html">
+  <meta property="og:image" content="https://aalas-dev.netlify.app/assets/images/Members-database.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/css/style.css?v=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
@@ -16,15 +33,15 @@
   <!-- Template Header -->
   <header class="navbar">
     <div class="logo">
-      <a href="index.html">✦ Alejandro Alas</a>
+      <a href="/index.html">✦ Alejandro Alas</a>
     </div>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="projects.html" class="active">Projects</a>
-      <a href="about.html">About</a>
+      <a href="/index.html">Home</a>
+      <a href="/projects.html" class="active">Projects</a>
+      <a href="/about.html">About</a>
     </nav>
     <div class="nav-controls">
-      <button id="theme-toggle" class="theme-btn">
+                  <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark theme">
         <span class="theme-icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -44,7 +61,7 @@
   </header>
 
   <!-- Case Study Content -->
-  <div class="wrap">
+  <div class="wrap case-study">
     <div class="hero">
       <div class="eyebrow">Case Study · Software Engineering</div>
       <h1>Castlemilk Pantry</h1>
@@ -63,7 +80,7 @@
         <a href="#" class="btn secondary trigger-feature-dialog"
           data-message="The code repository is currently being cleaned up and will be made public shortly.">Code
           Sample</a>
-        <a href="projects.html" class="btn secondary">← All Projects</a>
+        <a href="/projects.html" class="btn secondary">← All Projects</a>
       </div>
     </div>
 
@@ -191,9 +208,9 @@
             </div>
 
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Members-database.png" alt="Database View 1" class="zoomable-image">
-              <img src="assets/images/sms-message.png" alt="Database View 2" class="zoomable-image">
-              <img src="assets/images/message-sms.jpg" alt="Database View 3" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Members-database.png" alt="Database View 1" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/sms-message.png" alt="Database View 2" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/message-sms.jpg" alt="Database View 3" class="zoomable-image">
             </div>
           </div>
 
@@ -205,10 +222,10 @@
                 orientation video, plus an SMS with a direct link to the member's profile.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Registration.png" alt="Database View 1" class="zoomable-image">
-              <img src="assets/images/First-part-of-template.png" alt="Database View 2" class="zoomable-image">
-              <img src="assets/images/Second-part-email.png" alt="Database View 3" class="zoomable-image">
-              <img src="assets/images/Last-part-email-video.png" alt="Database View 4" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Registration.png" alt="Database View 1" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/First-part-of-template.png" alt="Database View 2" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Second-part-email.png" alt="Database View 3" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Last-part-email-video.png" alt="Database View 4" class="zoomable-image">
             </div>
           </div>
 
@@ -221,10 +238,10 @@
                 same flow.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Scanning feature.jpg" alt="Database View 1" class="zoomable-image">
-              <img src="assets/images/Active-only.jpg" alt="Database View 2" class="zoomable-image">
-              <img src="assets/images/Expire-only.jpg" alt="Database View 3" class="zoomable-image">
-              <img src="assets/images/Multi payment.PNG" alt="Database View 4" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Scanning%20feature.jpg" alt="Database View 1" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Active-only.jpg" alt="Database View 2" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Expire-only.jpg" alt="Database View 3" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Multi%20payment.PNG" alt="Database View 4" class="zoomable-image">
             </div>
           </div>
 
@@ -239,8 +256,8 @@
                 housing association, member vs. non-member split, generated instantly instead of hand-compiled.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Reports.png" alt="Database View 1" class="zoomable-image">
-              <img src="assets/images/Quarterly.png" alt="Database View 2" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Reports.png" alt="Database View 1" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Quarterly.png" alt="Database View 2" class="zoomable-image">
             </div>
           </div>
 
@@ -252,7 +269,7 @@
                 member sign-ups, total membership counts, and grouped dietary needs.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Dashboard.png" alt="Database View 1" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Dashboard.png" alt="Database View 1" class="zoomable-image">
             </div>
           </div>
 
@@ -265,7 +282,7 @@
                 with questions about other services.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/communications.png" alt="Database View 1" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/communications.png" alt="Database View 1" class="zoomable-image">
             </div>
           </div>
         </section>
@@ -361,8 +378,8 @@
         </section>
 
         <div class="footer-nav">
-          <a href="projects.html" class="back">← Back to all projects</a>
-          <a href="projects_case_Auldhouse_community_church.html">Next: Auldhouse →</a>
+          <a href="/projects.html" class="back">← Back to all projects</a>
+          <a href="/project-auldhouse-community-church.html">Next: Auldhouse →</a>
         </div>
       </main>
     </div>
@@ -412,7 +429,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=1"></script>
 </body>
 
 </html>

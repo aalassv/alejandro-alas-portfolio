@@ -3,24 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Selected software engineering and full-stack development projects by Alejandro Alas, including membership platforms, booking systems, and infrastructure migrations.">
     <title>Projects | Alejandro Alas</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://aalas-dev.netlify.app/projects.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects | Alejandro Alas">
+    <meta property="og:description"
+        content="Selected software engineering and full-stack development projects by Alejandro Alas.">
+    <meta property="og:url" content="https://aalas-dev.netlify.app/projects.html">
+    <meta property="og:image" content="https://aalas-dev.netlify.app/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="navbar">
         <div class="logo">
-            <a href="index.html">✦ Alejandro Alas</a>
+            <a href="/index.html">✦ Alejandro Alas</a>
         </div>
         <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="about.html">About</a>
+            <a href="/index.html">Home</a>
+            <a href="/projects.html" class="active">Projects</a>
+            <a href="/about.html">About</a>
         </nav>
         <div class="nav-controls">
-            <button id="theme-toggle" class="theme-btn">
+                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark theme">
                 <span class="theme-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -47,24 +64,24 @@
 
             <article class="apple-card">
                 <div class="card-content">
-                    <span class="card-category">Software Engineering</span>
+                    <span class="card-category">Full Stack Development</span>
                     <h3>Castlemilk Pantry</h3>
                     <p class="card-desc">
                         Engineered a custom membership platform for 350+ members using PostgreSQL, Express, React, and
                         Node.js. Replaced manual spreadsheets with digital QR check-ins and automated SMS notifications.
                     </p>
                     <div class="tech-tags">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">PostgreSQL</span>
                     </div>
                 </div>
                 <div class="card-image-wrapper">
-                    <img src="/assets/images/Members-database.png" alt="Castlemilk Pantry mobile view"
+                    <img loading="lazy" decoding="async" src="/assets/images/Members-database.png" alt="Castlemilk Pantry mobile view"
                         class="card-image">
                 </div>
-                <a href="projects_case_Castlemilk_Pantry.html" class="card-link-icon"
+                <a href="/project-castlemilk-pantry.html" class="card-link-icon"
                     aria-label="View Castlemilk Pantry Case Study">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="currentColor">
@@ -77,7 +94,7 @@
 
             <article class="apple-card">
                 <div class="card-content">
-                    <span class="card-category">Software Engineering</span>
+                    <span class="card-category">Full Stack Development</span>
                     <h3>Auldhouse Community Church</h3>
                     <p class="card-desc">
                         Migrated a complex application estate from AWS to a self-managed Azure Virtual Private Server.
@@ -85,17 +102,17 @@
                         service queues by 50%.
                     </p>
                     <div class="tech-tags">
-                        <span class="tech-tag">PERN</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Dokploy</span>
-                        <span class="tech-tag">Azure VPS</span>
+                        <span class="tag">PERN</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Dokploy</span>
+                        <span class="tag">Azure VPS</span>
                     </div>
                 </div>
                 <div class="card-image-wrapper">
-                    <img src="/assets/images/Auldhouse/Dashboard.png" alt="Auldhouse Community Church mobile view"
+                    <img loading="lazy" decoding="async" src="/assets/images/Auldhouse/Dashboard.png" alt="Auldhouse Community Church mobile view"
                         class="card-image">
                 </div>
-                <a href="projects_case_Auldhouse_community_church.html" class="card-link-icon"
+                <a href="/project-auldhouse-community-church.html" class="card-link-icon"
                     aria-label="Auldhouse Community Church Study">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="currentColor">
@@ -113,18 +130,18 @@
                         administrative workload by 30% by integrating automated client messaging features.
                     </p>
                     <div class="tech-tags">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Bootstrap</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Bootstrap</span>
                     </div>
                 </div>
                 <div class="card-image-wrapper">
-                    <img src="/assets/images/BikeForRefugees.png" alt="Cross Ethnic Community mobile view"
+                    <img loading="lazy" decoding="async" src="/assets/images/BikeForRefugees.png" alt="Cross Ethnic Community mobile view"
                         class="card-image">
                 </div>
-                <a href="projects_case_Bike_for_refugees.html" class="card-link-icon"
+                <a href="/project-bike-for-refugees.html" class="card-link-icon"
                     aria-label="View Bike For Refugees Case Study">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="currentColor">
@@ -143,13 +160,13 @@
                         Workspace integration. Currently managing ongoing IT administration.
                     </p>
                     <div class="tech-tags">
-                        <span class="tech-tag">Elementor</span>
-                        <span class="tech-tag">WordPress</span>
-                        <span class="tech-tag">Google Workspace</span>
+                        <span class="tag">Elementor</span>
+                        <span class="tag">WordPress</span>
+                        <span class="tag">Google Workspace</span>
                     </div>
                 </div>
                 <div class="card-image-wrapper">
-                    <img src="/assets/images/DesktopGoDeepScotland.png" alt="Go Deep Scotland mobile view"
+                    <img loading="lazy" decoding="async" src="/assets/images/DesktopGoDeepScotland.png" alt="Go Deep Scotland mobile view"
                         class="card-image">
                 </div>
                 <a href="https://godeepscotland.co.uk/" target="_blank" class="card-link-icon"
@@ -171,13 +188,13 @@
                         Successfully handed over the project and infrastructure in July 2024.
                     </p>
                     <div class="tech-tags">
-                        <span class="tech-tag">Google Workspace</span>
-                        <span class="tech-tag">Elementor</span>
-                        <span class="tech-tag">WordPress</span>
+                        <span class="tag">Google Workspace</span>
+                        <span class="tag">Elementor</span>
+                        <span class="tag">WordPress</span>
                     </div>
                 </div>
                 <div class="card-image-wrapper">
-                    <img src="/assets/images/desktopCrossEthnicCommunity.png" alt="Cross Ethnic Community mobile view"
+                    <img loading="lazy" decoding="async" src="/assets/images/desktopCrossEthnicCommunity.png" alt="Cross Ethnic Community mobile view"
                         class="card-image">
                 </div>
                 <a href="https://crossethnic.org.uk/" target="_blank" class="card-link-icon"
@@ -223,7 +240,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js?v=1"></script>
 </body>
 
 </html>

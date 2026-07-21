@@ -1,14 +1,7 @@
 :root {
-    /* Global Variables (Light Mode) */
-    --bg-color: #FFFFFF;
-    --text-color: #1a1a1a;
-    --accent-color: #3b82f6;
-    --nav-text: #4b5563;
-    --border-color: #e5e7eb;
-    
-    /* Case Study Specific Variables (Light Mode) */
-    --bg: #ffffff;
-    --card: #f9fafb;
+    /* Single source of truth for color tokens (Light Mode) */
+    --bg: #fafafc;
+    --card: #fff;
     --card-alt: #f3f4f6;
     --border: rgba(0, 0, 0, 0.1);
     --text: #1a1a1a;
@@ -20,14 +13,7 @@
 }
 
 [data-theme="dark"] {
-    /* Global Variables (Dark Mode) */
-    --bg-color: #0A0A0A;
-    --text-color: #f3f4f6;
-    --accent-color: #60a5fa;
-    --nav-text: #9ca3af;
-    --border-color: #374151;
-    
-    /* Case Study Specific Variables (Dark Mode) */
+    /* Single source of truth for color tokens (Dark Mode) */
     --bg: #0A0A0A;
     --card: #141414;
     --card-alt: #1A1D22;
@@ -53,8 +39,8 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--bg);
+    color: var(--text);
     transition: background-color 0.3s ease, color 0.3s ease;
     line-height: 1.6;
     display: flex;
@@ -76,7 +62,7 @@ body {
 
 .logo a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text);
     font-weight: 800;
     font-size: 1.2rem;
 }
@@ -90,7 +76,7 @@ body {
 .theme-btn {
     background: none;
     border: none;
-    color: var(--text-color);
+    color: var(--text);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -112,7 +98,7 @@ body {
 .hamburger {
     background: none;
     border: none;
-    color: var(--text-color);
+    color: var(--text);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -125,7 +111,7 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--bg-color);
+    background-color: var(--bg);
     flex-direction: column;
     padding: 2rem 0;
     text-align: center;
@@ -147,7 +133,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--nav-text);
+    color: var(--muted);
     margin: 1rem 0;
     display: inline-block;
     width: 100%;
@@ -158,7 +144,7 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--text-color);
+    color: var(--text);
 }
 
 /* --- Base Layout (Mobile First) --- */
@@ -187,7 +173,7 @@ body {
 
 .subtitle {
     font-size: 1.2rem;
-    color: var(--nav-text);
+    color: var(--muted);
     margin-bottom: 2.5rem;
 }
 
@@ -195,7 +181,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    color: var(--nav-text);
+    color: var(--muted);
     font-size: 1.1rem;
 }
 
@@ -205,28 +191,6 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 0.5rem;
-}
-
-.action-links a {
-    text-decoration: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: opacity 0.2s;
-}
-.btn-primary {
-    background-color: var(--text-color);
-    color: var(--bg-color);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--text-color);
-    border: 1px solid var(--text-color);
-}
-
-.action-links a:hover {
-    opacity: 0.8;
 }
 
 /* --- Apple-Style Projects Grid --- */
@@ -239,7 +203,7 @@ body {
 
 .apple-card {
     background-color: var(--card);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border);
     border-radius: 24px;
     overflow: hidden;
     position: relative;
@@ -271,7 +235,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--nav-text);
+    color: var(--muted);
     display: block;
     margin-bottom: 0.5rem;
 }
@@ -284,7 +248,7 @@ body {
 }
 
 .card-desc {
-    color: var(--nav-text);
+    color: var(--muted);
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -294,16 +258,6 @@ body {
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 1rem;
-}
-
-.tech-tag {
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 5px 12px;
-    border-radius: 20px;
-    background: var(--card-alt);
-    border: 1px solid var(--border-color);
-    color: var(--nav-text);
 }
 
 .card-image-wrapper {
@@ -329,8 +283,8 @@ body {
     position: absolute;
     bottom: 1.5rem;
     right: 1.5rem;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    color: var(--text);
+    background-color: var(--bg);
     border-radius: 50%;
     width: 36px;
     height: 36px;
@@ -349,7 +303,7 @@ body {
 
 /* --- Footer (Mobile First) --- */
 .footer {
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--border);
     width: 100%;
 }
 
@@ -360,7 +314,7 @@ body {
     gap: 1.5rem;
     padding: 2rem 5%;
     font-size: 0.9rem;
-    color: var(--nav-text);
+    color: var(--muted);
     text-align: center;
     max-width: 1280px;
     margin: 0 auto;
@@ -373,14 +327,14 @@ body {
 }
 
 .social-links a {
-    color: var(--nav-text);
+    color: var(--muted);
     text-decoration: none;
     display: flex;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .social-links a:hover {
-    color: var(--text-color);
+    color: var(--text);
     transform: translateY(-3px);
 }
 
@@ -441,7 +395,7 @@ body {
 .eyebrow {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--accent-color);
+    color: var(--blue);
     margin-bottom: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -483,17 +437,9 @@ h3 {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-a {
+.case-study a {
     color: inherit;
     text-decoration: none;
-}
-
-/* Case Study Nav Overrides */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 26px 0;
 }
 
 .logo {
@@ -574,10 +520,11 @@ nav {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    text-decoration: none;
 }
 
 .btn.primary {
-    background: var(--accent-color);
+    background: var(--blue);
     color: #FFFFFF;
 }
 
@@ -640,12 +587,12 @@ nav {
 }
 
 /* Case Study Section base */
-section {
+.case-study section {
     padding: 52px 0;
     border-bottom: 1px solid var(--border);
 }
 
-section:last-of-type {
+.case-study section:last-of-type {
     border-bottom: none;
 }
 
@@ -1188,7 +1135,7 @@ section h2 {
     margin-bottom: 2rem;
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--text);
 }
 
 .stat-strip span {
@@ -1205,6 +1152,6 @@ section h2 {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: var(--accent-color);
+    background-color: var(--blue);
 }
 
