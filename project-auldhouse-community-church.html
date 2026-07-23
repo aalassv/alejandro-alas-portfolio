@@ -3,9 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Case study: migrating Auldhouse Community Church from AWS to a self-managed Azure VPS with Docker and Dokploy, cutting service queues by 50%.">
     <title>Auldhouse Community Church — Case Study | Alejandro Alas</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://aalas-dev.netlify.app/project-auldhouse-community-church.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Auldhouse Community Church — Case Study | Alejandro Alas">
+    <meta property="og:description"
+        content="Migrating Auldhouse Community Church from AWS to a self-managed Azure VPS with Docker and Dokploy, cutting service queues by 50%.">
+    <meta property="og:url" content="https://aalas-dev.netlify.app/project-auldhouse-community-church.html">
+    <meta property="og:image" content="https://aalas-dev.netlify.app/assets/images/Auldhouse/Dashboard.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css?v=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -14,15 +31,15 @@
     <!-- Template Header -->
     <header class="navbar">
         <div class="logo">
-            <a href="index.html">✦ Alejandro Alas</a>
+            <a href="/index.html">✦ Alejandro Alas</a>
         </div>
         <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="about.html">About</a>
+            <a href="/index.html">Home</a>
+            <a href="/projects.html" class="active">Projects</a>
+            <a href="/about.html">About</a>
         </nav>
         <div class="nav-controls">
-            <button id="theme-toggle" class="theme-btn">
+                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark theme">
                 <span class="theme-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -42,7 +59,7 @@
     </header>
 
     <!-- Case Study Content -->
-    <div class="wrap">
+    <div class="wrap case-study">
       <div class="hero">
         <div class="eyebrow">Case Study · Full Stack Development</div>
         <h1>Auldhouse Community Church</h1>
@@ -61,7 +78,7 @@
         <a href="#" class="btn secondary trigger-feature-dialog"
           data-message="The code repository is currently being cleaned up and will be made public shortly.">Code
           Sample</a>
-        <a href="projects.html" class="btn secondary">← All Projects</a>
+        <a href="/projects.html" class="btn secondary">← All Projects</a>
       </div>
     </div>
 
@@ -184,8 +201,8 @@
                 the system flags and records it as an emergency provision instead of turning them away.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Auldhouse/Registering-users.png" alt="Attendance lookup view" class="zoomable-image">
-              <img src="assets/images/Auldhouse/New-user.png" alt="New user registration view" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Auldhouse/Registering-users.png" alt="Attendance lookup view" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Auldhouse/New-user.png" alt="New user registration view" class="zoomable-image">
             </div>
           </div>
 
@@ -198,7 +215,7 @@
                 straightforward record system over communication features.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Auldhouse/Registering.png" alt="Membership database view" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Auldhouse/Registering.png" alt="Membership database view" class="zoomable-image">
             </div>
           </div>
 
@@ -212,7 +229,7 @@
                 reporting period.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Auldhouse/Report visits per week and export feature.png" alt="Reports view" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Auldhouse/Report%20visits%20per%20week%20and%20export%20feature.png" alt="Reports view" class="zoomable-image">
             </div>
           </div>
 
@@ -224,7 +241,7 @@
                 week's visitors removing the need to manually compile attendance at the end of each session.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Auldhouse/select any week needed to the email.png" alt="Weekly digest email" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Auldhouse/select%20any%20week%20needed%20to%20the%20email.png" alt="Weekly digest email" class="zoomable-image">
             </div>
           </div>
 
@@ -236,7 +253,7 @@
                 monthly visitor totals giving leadership visibility they never had with paper records.</p>
             </div>
             <div class="feature-media thumbnail-grid">
-              <img src="assets/images/Auldhouse/Dashboard.png" alt="Dashboard view" class="zoomable-image">
+              <img loading="lazy" decoding="async" src="/assets/images/Auldhouse/Dashboard.png" alt="Dashboard view" class="zoomable-image">
             </div>
           </div>
         </section>
@@ -316,9 +333,9 @@
         </section>
 
         <div class="footer-nav">
-          <a href="../projects.html" class="back">← Back to all projects</a>
-          <a href="projects_case_Castlemilk_Pantry.html">← Previous: Castlemilk Pantry</a>
-          <a href="projects_case_Bike_for_refugees.html" class="next">Next: Bikes for Refugees →</a>
+          <a href="/projects.html" class="back">← Back to all projects</a>
+          <a href="/project-castlemilk-pantry.html">← Previous: Castlemilk Pantry</a>
+          <a href="/project-bike-for-refugees.html" class="next">Next: Bikes for Refugees →</a>
         </div>
       </main>
     </div>
@@ -369,7 +386,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+  <script src="/js/main.js?v=1"></script>
 </body>
 
 </html>

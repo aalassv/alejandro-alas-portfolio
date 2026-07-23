@@ -3,24 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Alejandro Alas — Full-stack web developer in Scotland with 16 years of IT infrastructure experience, building resilient PERN-stack applications.">
     <title>Alejandro Alas | Software Developer</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://aalas-dev.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Alejandro Alas | Software Developer">
+    <meta property="og:description"
+        content="Full-stack web developer in Scotland with 16 years of IT infrastructure experience, building resilient PERN-stack applications.">
+    <meta property="og:url" content="https://aalas-dev.netlify.app/">
+    <meta property="og:image" content="https://aalas-dev.netlify.app/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="navbar">
         <div class="logo">
-            <a href="index.html">✦ Alejandro Alas</a>
+            <a href="/index.html">✦ Alejandro Alas</a>
         </div>
         <nav class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
+            <a href="/index.html" class="active">Home</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/about.html">About</a>
         </nav>
         <div class="nav-controls">
-            <button id="theme-toggle" class="theme-btn">
+                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark theme">
                 <span class="theme-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -50,11 +67,12 @@
     <span>3 yrs full-stack dev</span>
     <span>5 projects shipped</span>
 </div>
-        <div class="action-links">
-            <a href="about.html" class="btn-primary">View About</a>
-            <a href="projects.html" class="btn-secondary">See Projects</a>
-            <a href="/assets/Alejandro_Alas_CV_2026.pdf" class="btn-secondary" target="_blank" download>Download CV</a>
+        <div class="action-links"> 
+            <a href="/about.html" class="btn primary">View About</a>
+            <a href="/projects.html" class="btn secondary">See Projects</a>
+            <a href="/assets/Alejandro_Alas_CV_2026.pdf" class="btn secondary" target="_blank" download>Download CV</a>
         </div>
+
     </main>
     <footer class="footer">
         <div class="footer-content">
@@ -87,7 +105,7 @@
             </div>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js?v=1"></script>
 </body>
 
 </html>
