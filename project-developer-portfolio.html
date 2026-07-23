@@ -1,61 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
     <script>
       (function () {
         var t = localStorage.getItem("theme") || "dark";
         document.documentElement.setAttribute("data-theme", t);
       })();
     </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Case study: building a zero-dependency developer portfolio from a Figma model using only HTML, CSS, and JavaScript fundamentals, in two weeks.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Case study: building a zero-dependency developer portfolio from a Figma model using only HTML, CSS, and JavaScript fundamentals, in two weeks."
+    />
     <title>Developer Portfolio — Case Study | Alejandro Alas</title>
-    <link rel="canonical" href="https://aalas-dev.netlify.app/project-developer-portfolio.html">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Developer Portfolio — Case Study | Alejandro Alas">
-    <meta property="og:description"
-        content="Building a zero-dependency developer portfolio from a Figma model using only HTML, CSS, and JavaScript fundamentals, in two weeks.">
-    <meta property="og:url" content="https://aalas-dev.netlify.app/project-developer-portfolio.html">
-    <meta property="og:image" content="https://aalas-dev.netlify.app/assets/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="/css/style.css?v=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
+    <link
+      rel="canonical"
+      href="https://aalas-dev.netlify.app/project-developer-portfolio.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Developer Portfolio — Case Study | Alejandro Alas"
+    />
+    <meta
+      property="og:description"
+      content="Building a zero-dependency developer portfolio from a Figma model using only HTML, CSS, and JavaScript fundamentals, in two weeks."
+    />
+    <meta
+      property="og:url"
+      content="https://aalas-dev.netlify.app/project-developer-portfolio.html"
+    />
+    <meta
+      property="og:image"
+      content="https://aalas-dev.netlify.app/assets/og-image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="/css/style.css?v=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- Template Header -->
     <header class="navbar">
-        <div class="logo">
-            <a href="/index.html">✦ Alejandro Alas</a>
-        </div>
-        <nav class="nav-links">
-            <a href="/index.html">Home</a>
-            <a href="/projects.html" class="active">Projects</a>
-            <a href="/about.html">About</a>
-        </nav>
-        <div class="nav-controls">
-                        <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark theme">
-                <span class="theme-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </span>
-            </button>
+      <div class="logo">
+        <a href="/index.html">✦ Alejandro Alas</a>
+      </div>
+      <nav class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/projects.html" class="active">Projects</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <div class="nav-controls">
+        <button
+          id="theme-toggle"
+          class="theme-btn"
+          aria-label="Toggle light and dark theme"
+        >
+          <span class="theme-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
 
-            <button class="hamburger" aria-label="Menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="4" y1="9" x2="20" y2="9"></line>
-                    <line x1="4" y1="15" x2="20" y2="15"></line>
-                </svg>
-            </button>
-        </div>
+        <button class="hamburger" aria-label="Menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="4" y1="9" x2="20" y2="9"></line>
+            <line x1="4" y1="15" x2="20" y2="15"></line>
+          </svg>
+        </button>
+      </div>
     </header>
 
     <!-- Case Study Content -->
@@ -63,297 +103,470 @@
       <div class="hero">
         <div class="eyebrow">Case Study · Frontend & Fundamentals</div>
         <h1>Developer Portfolio</h1>
-        <p class="tagline">A personal portfolio designed in Figma and hand-built with nothing but HTML, CSS, and
-          JavaScript — no frameworks, no component libraries, no build step. Two weeks of writing every line myself,
-          to prove I could, and to finally have somewhere to put the work.</p>
-      <div class="status-row">
-        <span class="badge live">● Live in production</span>
-        <span class="badge">Built Jun 2026 · 2-week sprint</span>
-        <span class="badge">Ongoing — continuously refined</span>
-        <span class="badge">Zero dependencies</span>
-      </div>
-      <div class="hero-actions">
-        <a href="https://aalas-dev.netlify.app/" target="_blank" class="btn primary">View Live Site</a>
-        <a href="#" class="btn secondary trigger-feature-dialog"
-          data-message="The code repository is currently being cleaned up and will be made public shortly.">Code
-          Sample</a>
-        <a href="/projects.html" class="btn secondary">← All Projects</a>
-      </div>
-    </div>
-
-    <div class="page-grid">
-      <nav class="rail">
-        <div class="rail-title">On this page</div>
-        <a href="#overview">Overview</a>
-        <a href="#origin">How it started</a>
-        <a href="#role">My role</a>
-        <a href="#process">Process &amp; tools</a>
-        <a href="#features">Key features</a>
-        <a href="#technical">Technical breakdown</a>
-        <a href="#impact">Impact</a>
-        <a href="#reflection">Lessons learned</a>
-      </nav>
-
-      <main>
-        <section id="overview">
-          <div class="section-label">01 — Overview</div>
-          <h2>Background</h2>
-          <p class="lede">I didn't have a portfolio. I had client work — Castlemilk Pantry, Auldhouse Community
-            Church, Bikes for Refugees — but nowhere to actually show it. This site is that missing piece: a single
-            place built entirely on web fundamentals, deliberately without a framework, so I could hold total
-            control over how it looks, loads, and behaves.</p>
-          <div class="meta-grid">
-            <div class="meta-card">
-              <div class="k">Client</div>
-              <div class="v">Myself</div>
-            </div>
-            <div class="meta-card">
-              <div class="k">Timeline</div>
-              <div class="v">Jun 2026 — 2-week build, ongoing refinement</div>
-            </div>
-            <div class="meta-card">
-              <div class="k">Team</div>
-              <div class="v">Solo — design, build, content, deployment</div>
-            </div>
-          </div>
-        </section>
-
-        <section id="origin">
-          <div class="section-label">02 — How It Started</div>
-          <h2>From a Figma file that sat unfinished</h2>
-          <p class="lede">The idea started long before the code did. I began modelling the site in Figma, then let it
-            sit — I didn't have enough finished project work yet to justify building it out, and I wanted the
-            portfolio to actually have something real to show, not empty placeholder cards.</p>
-          <p class="lede" style="margin-top:14px;">The trigger to finally build it was getting permission to work in
-            the UK. Once that came through, I rushed to turn the Figma model into a real, live site — I wanted
-            something I could point employers and clients to immediately, not "in progress."</p>
-
-          <div class="sketch-note">
-            <p><strong style="color:var(--text);">Why wait, and why fundamentals:</strong> I held off until I had
-              real projects to showcase, because a portfolio without proof isn't a portfolio. And when I did build
-              it, I chose HTML, CSS, and JavaScript over a framework on purpose — not because I'm against frameworks,
-              but because I wanted to prove to myself that I could take full control of my own site, down to every
-              line.</p>
-          </div>
-        </section>
-
-        <section id="role">
-          <div class="section-label">03 — My Role</div>
-          <h2>Designer, developer, and only stakeholder</h2>
-          <p class="lede">Every decision on this project — visual, technical, content — was mine. That made it fast
-            to decide, but it also meant there was no one else to catch what a framework, a teammate, or a design
-            system would normally catch for you.</p>
-          <div class="role-split">
-            <div class="role-card mine">
-              <h3>Design phase (Figma)</h3>
-              <ul>
-                <li>Modelled layout, typography, and colour system before writing any code</li>
-                <li>Planned the light/dark theme and the project-card grid</li>
-                <li>Left the file dormant until I had real project work to fill it with</li>
-              </ul>
-            </div>
-            <div class="role-card theirs">
-              <h3>Build phase (Code)</h3>
-              <ul>
-                <li>Translated the Figma model into hand-written HTML/CSS/JS</li>
-                <li>Built theme switching, the lighting effect, and the lightbox from scratch</li>
-                <li>Structured, tested, and deployed the whole site solo in two weeks</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section id="process">
-          <div class="section-label">04 — Process &amp; Tools</div>
-          <h2>Design first, then a fundamentals-only build</h2>
-          <p class="lede">Unlike the client projects, there was no monthly stakeholder cadence here — just me,
-            deciding what "done" looked like. The process was simple by design: finish the Figma model, then rebuild
-            it piece by piece in plain HTML, CSS, and JavaScript, resisting the urge to reach for a framework or a
-            component library at every step where one would have made things faster.</p>
-        </section>
-
-        <section id="features">
-          <div class="section-label">05 — Key Features</div>
-          <h2>What the site does — and how, without a framework</h2>
-
-          <div class="feature">
-            <div>
-              <div class="feature-num">Feature 01</div>
-              <h3>Zero-dependency theme switching</h3>
-              <p>A light/dark toggle with no UI library behind it — just a small inline script that reads and writes
-                a value in <code>localStorage</code> before the page paints, so there's no flash of the wrong theme
-                on load, and a toggle button that flips a <code>data-theme</code> attribute on the page.</p>
-            </div>
-            <div class="feature-media thumbnail-grid">
-              <!-- TODO: add screenshot — theme toggle, light vs dark -->
-            </div>
-          </div>
-
-          <div class="feature">
-            <div>
-              <div class="feature-num">Feature 02</div>
-              <h3>Dynamic lighting</h3>
-              <p>A subtle interactive glow effect layered into the interface with plain CSS and JavaScript, no
-                canvas library or animation framework required — proof that a good amount of visual polish is
-                achievable with fundamentals alone if you're willing to write it by hand.</p>
-            </div>
-            <div class="feature-media thumbnail-grid">
-              <!-- TODO: add screenshot — lighting/glow effect -->
-            </div>
-          </div>
-
-          <div class="feature">
-            <div>
-              <div class="feature-num">Feature 03</div>
-              <h3>Modal lightbox previews</h3>
-              <p>A custom image lightbox for project screenshots, built on the native <code>&lt;dialog&gt;</code>
-                element with hand-written open/close/next/prev logic — the same pattern reused across the case study
-                pages on this site — instead of pulling in a gallery library.</p>
-            </div>
-            <div class="feature-media thumbnail-grid">
-              <!-- TODO: add screenshot — lightbox open on a project image -->
-            </div>
-          </div>
-
-          <div class="feature">
-            <div>
-              <div class="feature-num">Feature 04</div>
-              <h3>Responsive CSS grid architecture</h3>
-              <p>The project cards, case-study layout, and navigation are all built on hand-rolled CSS Grid and
-                Flexbox, with no utility framework underneath — every breakpoint and spacing decision written and
-                tuned by hand.</p>
-            </div>
-            <div class="feature-media thumbnail-grid">
-              <!-- TODO: add screenshot — responsive grid at different widths -->
-            </div>
-          </div>
-        </section>
-
-        <section id="technical">
-          <div class="section-label">06 — Technical Breakdown</div>
-          <h2>How it's built</h2>
-          <div class="tag-row">
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">Vanilla JavaScript</span>
-            <span class="tag">No framework</span>
-            <span class="tag">No build step</span>
-            <span class="tag">Netlify</span>
-          </div>
-
-          <div class="decision">
-            <div class="k">Decision — Fundamentals over a framework</div>
-            <p>I'm not against frameworks or libraries — my client projects lean on React and Node.js. This site was
-              a deliberate exception, built to prove I could take full control of a website end to end without
-              reaching for tooling to do the hard parts for me.</p>
-          </div>
-          <div class="decision">
-            <div class="k">Decision — Ship as soon as there was something to show</div>
-            <p>I held the Figma design back until client work existed to fill it with, then moved as soon as I had
-              permission to work in the UK. Speed mattered more than perfection at that point — a live, imperfect
-              portfolio beats a polished one still sitting in a design file.</p>
-          </div>
-          <div class="decision">
-            <div class="k">Decision — Keep it simple, on purpose</div>
-            <p>With no component system to lean on, every repeated piece of UI — cards, tags, buttons — is
-              hand-duplicated across the markup. I kept the site intentionally simple in scope specifically so that
-              repetition stayed manageable rather than becoming unmanageable.</p>
-          </div>
-        </section>
-
-        <section id="impact">
-          <div class="section-label">07 — Impact</div>
-          <h2>What changed</h2>
-          <p class="lede">Built in a two-week sprint after getting permission to work in the UK, this site turned a
-            dormant Figma file into the live home for every case study on this domain — including this one.</p>
-          <div class="impact-grid">
-            <div class="impact-stat">
-              <div class="num">2 weeks</div>
-              <div class="label">from Figma model to live site</div>
-            </div>
-            <div class="impact-stat">
-              <div class="num">0</div>
-              <div class="label">frameworks or UI libraries used</div>
-            </div>
-            <div class="impact-stat">
-              <div class="num">3+</div>
-              <div class="label">real client case studies now hosted here</div>
-            </div>
-            <div class="impact-stat">
-              <div class="num">Ongoing</div>
-              <div class="label">actively refined since launch</div>
-            </div>
-          </div>
-        </section>
-
-        <section id="reflection" style="border-bottom:none;">
-          <div class="reflection">
-            <h2>What I'd do differently</h2>
-            <p>Building this took me for a ride into complexity I don't usually see in client work — repeating the
-              same markup over and over with no components to reach for. It made me rethink, honestly, why we use
-              frameworks in the first place, and gave me a real appreciation for what a library like React is
-              actually solving. Writing lightweight, dependency-free code is beautiful, and the control is real —
-              but it isn't easy, and even on a site this small, it isn't scalable. Next time I'd consider at least a
-              lightweight templating approach for repeated components, while keeping the rest fundamentals-first.
-              Even so, I'm glad I built it this way once — it took me back to the fundamentals I first learned when I
-              started training as a full-stack developer, and that was worth the two weeks on its own.</p>
-          </div>
-        </section>
-
-        <div class="footer-nav">
-          <a href="/projects.html" class="back">← Back to all projects</a>
-          <a href="/project-bike-for-refugees.html">← Previous: Bikes for Refugees</a>
-          <a href="https://godeepscotland.co.uk" class="next">Next: Godeep Scotland →</a>
+        <p class="tagline">
+          A personal portfolio designed in Figma and hand-built with nothing but
+          HTML, CSS, and JavaScript, no frameworks, no component libraries, no
+          build step. Two weeks of writing every line myself, to prove I could,
+          and to finally have somewhere to put the work.
+        </p>
+        <div class="status-row">
+          <span class="badge live">● Live in production</span>
+          <span class="badge">Built Jun 2026 · 2-week sprint</span>
+          <span class="badge">Ongoing — continuously refined</span>
+          <span class="badge">Zero dependencies</span>
         </div>
-      </main>
-    </div>
-  </div>
+        <div class="hero-actions">
+          <a
+            href="https://aalas-dev.netlify.app/"
+            target="_blank"
+            class="btn primary"
+            >View Live Site</a
+          >
+          <a
+            href="https://github.com/aalassv/alejandro-alas-portfolio"
+            class="btn secondary"
+            target="_blank"
+            >Repository</a
+          >
+          <a href="/projects.html" class="btn secondary">← All Projects</a>
+        </div>
+      </div>
 
-  <dialog id="image-modal" class="lightbox full-screen-lightbox">
-    <button id="close-modal" aria-label="Close image">✕</button>
-    <button id="prev-btn" class="nav-arrow" aria-label="Previous image">❮</button>
-    <button id="next-btn" class="nav-arrow" aria-label="Next image">❯</button>
-    <div class="modal-track" id="modal-track"></div>
-  </dialog>
-  
-  <dialog id="feature-dialog" class="custom-dialog">
+      <div class="page-grid">
+        <nav class="rail">
+          <div class="rail-title">On this page</div>
+          <a href="#overview">Overview</a>
+          <a href="#origin">How it started</a>
+          <a href="#role">My role</a>
+          <a href="#process">Process &amp; tools</a>
+          <a href="#features">Key features</a>
+          <a href="#technical">Technical breakdown</a>
+          <a href="#impact">Impact</a>
+          <a href="#reflection">Lessons learned</a>
+        </nav>
+
+        <main>
+          <section id="overview">
+            <div class="section-label">01 — Overview</div>
+            <h2>Background</h2>
+            <p class="lede">
+              I didn't have a portfolio. I had client work, Castlemilk Pantry,
+              Auldhouse Community Church, Bikes for Refugees, but nowhere to
+              actually show it. This site is that missing piece: a single place
+              built entirely on web fundamentals, deliberately without a
+              framework, so I could hold total control over how it looks, loads,
+              and behaves.
+            </p>
+            <div class="meta-grid">
+              <div class="meta-card">
+                <div class="k">Client</div>
+                <div class="v">Myself</div>
+              </div>
+              <div class="meta-card">
+                <div class="k">Timeline</div>
+                <div class="v">Jun 2026 — 2-week build, ongoing refinement</div>
+              </div>
+              <div class="meta-card">
+                <div class="k">Team</div>
+                <div class="v">Solo — design, build, content, deployment</div>
+              </div>
+            </div>
+          </section>
+
+          <section id="origin">
+            <div class="section-label">02 — How It Started</div>
+            <h2>From a Figma file that sat unfinished</h2>
+            <p class="lede">
+              The idea started long before the code did. I began modelling the
+              site in Figma, then let it sit — I didn't have enough finished
+              project work yet to justify building it out, and I wanted the
+              portfolio to actually have something real to show, not empty
+              placeholder cards.
+            </p>
+            <p class="lede" style="margin-top: 14px">
+              The trigger to finally build it was landing in a position to
+              actively pursue full-stack roles. Once that moment came, I rushed
+              to turn the Figma model into a real, live site — I wanted
+              something I could point employers and clients to immediately, not
+              "in progress."
+            </p>
+
+            <div class="sketch-note">
+              <p>
+                <strong style="color: var(--text)"
+                  >Why wait, and why fundamentals:</strong
+                >
+                I held off until I had real projects to showcase, because a
+                portfolio without proof isn't a portfolio. And when the moment
+                came to build it, I chose HTML, CSS, and JavaScript over a
+                framework on purpose, not because I'm against frameworks, but
+                because I wanted to prove to myself that I could take full
+                control of my own site, down to every line.
+              </p>
+            </div>
+          </section>
+
+          <section id="role">
+            <div class="section-label">03 — My Role</div>
+            <h2>Designer, developer, and only stakeholder</h2>
+            <p class="lede">
+              Every decision on this project, visual, technical, content was
+              mine. That made it fast to decide, but it also meant there was no
+              one else to catch what a framework, a teammate, or a design system
+              would normally catch for you.
+            </p>
+            <div class="role-split">
+              <div class="role-card mine">
+                <h3>Design phase (Figma)</h3>
+                <ul>
+                  <li>
+                    Modelled layout, typography, and colour system before
+                    writing any code
+                  </li>
+                  <li>
+                    Planned the light/dark theme and the project-card grid
+                  </li>
+                  <li>
+                    Left the file dormant until I had real project work to fill
+                    it with
+                  </li>
+                </ul>
+              </div>
+              <div class="role-card theirs">
+                <h3>Build phase (Code)</h3>
+                <ul>
+                  <li>
+                    Translated the Figma model into hand-written HTML/CSS/JS
+                  </li>
+                  <li>
+                    Built theme switching, the lighting effect, and the lightbox
+                    from scratch
+                  </li>
+                  <li>
+                    Structured, tested, and deployed the whole site solo in two
+                    weeks
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="process">
+            <div class="section-label">04 — Process &amp; Tools</div>
+            <h2>Design first, then a fundamentals-only build</h2>
+            <p class="lede">
+              Unlike the client projects, there was no monthly stakeholder
+              cadence here but just me, deciding what "done" looked like. The
+              process was simple by design: finish the Figma model, then rebuild
+              it piece by piece in plain HTML, CSS, and JavaScript, resisting
+              the urge to reach for a framework or a component library at every
+              step where one would have made things faster.
+            </p>
+          </section>
+
+          <section id="features">
+            <div class="section-label">05 — Key Features</div>
+            <h2>What the site does and how, without a framework</h2>
+
+            <div class="feature">
+              <div>
+                <div class="feature-num">Feature 01</div>
+                <h3>Zero-dependency theme switching</h3>
+                <p>
+                  A light/dark toggle with no UI library behind it just a small
+                  inline script that reads and writes a value in
+                  <code>localStorage</code> before the page paints, so there's
+                  no flash of the wrong theme on load, and a toggle button that
+                  flips a <code>data-theme</code> attribute on the page.
+                </p>
+              </div>
+              <div class="feature-media thumbnail-grid">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="/assets/images/Portfolio/toggle-button-dark-icon-to-switch-theme.png"
+                  alt="Toggle button dark icon to switch theme"
+                  class="zoomable-image"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="/assets/images/Portfolio/toggle-button-light-icon-to-switch-theme.png"
+                  alt="Toggle button light icon to switch theme"
+                  class="zoomable-image"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="/assets/images/Portfolio/Portfolio-script.png"
+                  alt="Piece of JavaScript code that handles the theme switching logic"
+                  class="zoomable-image"
+                />
+              </div>
+            </div>
+
+            <div class="feature">
+              <div>
+                <div class="feature-num">Feature 02</div>
+                <h3>Modal lightbox previews</h3>
+                <p>
+                  A custom image lightbox for project screenshots, built on the
+                  native <code>&lt;dialog&gt;</code> element with hand-written
+                  open/close/next/prev logic — the same pattern reused across
+                  the case study pages on this site — instead of pulling in a
+                  gallery library.
+                </p>
+              </div>
+              <div class="feature-media thumbnail-grid">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="/assets/images/Portfolio/Modal-lightbox-previews.png"
+                  alt="Modal lightbox previews of the portfolio project cards"
+                  class="zoomable-image"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="/assets/images/Portfolio/arrow-icon-to-next-image.png"
+                  alt="Arrow icon to next image in the modal lightbox"
+                  class="zoomable-image"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="/assets/images/Portfolio/arrow-icon-to-previous-image.png"
+                  alt="Arrow icon to previous image in the modal lightbox"
+                  class="zoomable-image"
+                />
+              </div>
+            </div>
+
+            <div class="feature">
+              <div>
+                <div class="feature-num">Feature 03</div>
+                <h3>Responsive CSS grid architecture</h3>
+                <p>
+                  The project cards, case-study layout, and navigation are all
+                  built on hand-crafted CSS Grid and Flexbox, with no utility
+                  framework underneath — every breakpoint and spacing decision
+                  written and tuned by hand.
+                </p>
+              </div>
+
+              <div class="feature-media thumbnail-grid">
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="/assets/images/Portfolio/Mobile-portfolio-cards-feature-04.png"
+                  alt="Mobile view of the portfolio project cards"
+                  class="zoomable-image"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="/assets/images/Portfolio/Desktop-portfolio-cards-feature-04.png"
+                  alt="Desktop view of the portfolio project cards"
+                  class="zoomable-image"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section id="technical">
+            <div class="section-label">06 — Technical Breakdown</div>
+            <h2>How it's built</h2>
+            <div class="tag-row">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">Vanilla JavaScript</span>
+              <span class="tag">No framework</span>
+              <span class="tag">Netlify</span>
+            </div>
+
+            <div class="decision">
+              <div class="k">Decision, Fundamentals over a framework</div>
+              <p>
+                I'm not against frameworks or libraries, my client projects
+                lean on React and Node.js. This site was a deliberate exception,
+                built to prove I could take full control of a website end to end
+                without reaching for tooling to do the hard parts for me.
+              </p>
+            </div>
+            <div class="decision">
+              <div class="k">
+                Decision — Ship as soon as there was something to show
+              </div>
+              <p>
+                I held the Figma design back until client work existed to fill
+                it with, then moved as soon as I was in a position to actively
+                pursue full-stack roles. Speed mattered more than perfection at
+                that point a live, imperfect portfolio beats a polished one
+                still sitting in a design file.
+              </p>
+            </div>
+            <div class="decision">
+              <div class="k">Decision — Keep it simple, on purpose</div>
+              <p>
+                With no component system to lean on, every repeated piece of UI
+                cards, tags, buttons, is hand-duplicated across the markup. I
+                kept the site intentionally simple in scope specifically so that
+                repetition stayed manageable rather than becoming unmanageable.
+              </p>
+            </div>
+          </section>
+
+          <section id="impact">
+            <div class="section-label">07 — Impact</div>
+            <h2>What changed</h2>
+            <p class="lede">
+              Built in a two-week sprint after getting permission to work in the
+              UK, this site turned a dormant Figma file into the live home for
+              every case study on this domain including this one.
+            </p>
+            <div class="impact-grid">
+              <div class="impact-stat">
+                <div class="num">2 weeks</div>
+                <div class="label">from Figma model to live site</div>
+              </div>
+              <div class="impact-stat">
+                <div class="num">0</div>
+                <div class="label">frameworks or UI libraries used</div>
+              </div>
+              <div class="impact-stat">
+                <div class="num">3+</div>
+                <div class="label">
+                  real client case studies now hosted here
+                </div>
+              </div>
+              <div class="impact-stat">
+                <div class="num">Ongoing</div>
+                <div class="label">actively refined since launch</div>
+              </div>
+            </div>
+          </section>
+
+          <section id="reflection" style="border-bottom: none">
+            <div class="reflection">
+              <h2>What I'd do differently</h2>
+              <p>
+                Building this took me for a ride into complexity I don't usually
+                see in client work, repeating the same markup over and over
+                with no components to reach for. It made me rethink, honestly,
+                why we use frameworks in the first place, and gave me a real
+                appreciation for what a library like React is actually solving.
+                Writing lightweight, dependency-free code is beautiful, and the
+                control is real but it isn't easy, and even on a site this
+                small, it isn't scalable. Next time I'd consider at least a
+                lightweight templating approach for repeated components, while
+                keeping the rest fundamentals-first. Even so, I'm glad I built
+                it this way once it took me back to the fundamentals I first
+                learned when I started training as a full-stack developer, and
+                that was worth the two weeks on its own.
+              </p>
+            </div>
+          </section>
+
+          <div class="footer-nav">
+            <a href="/projects.html" class="back">← Back to all projects</a>
+            <a href="/project-bike-for-refugees.html"
+              >← Previous: Bikes for Refugees</a
+            >
+            <a href="https://godeepscotland.co.uk" class="next"
+              >Next: Godeep Scotland →</a
+            >
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <dialog id="image-modal" class="lightbox full-screen-lightbox">
+      <button id="close-modal" aria-label="Close image">✕</button>
+      <button id="prev-btn" class="nav-arrow" aria-label="Previous image">
+        ❮
+      </button>
+      <button id="next-btn" class="nav-arrow" aria-label="Next image">❯</button>
+      <div class="modal-track" id="modal-track"></div>
+    </dialog>
+
+    <dialog id="feature-dialog" class="custom-dialog">
       <div class="dialog-content">
-          <h3 id="dialog-title">Feature Notice</h3>
-          <p id="dialog-message">This feature is currently being built and will be available soon.</p>
-          <button id="close-feature-dialog" class="btn primary">Got it</button>
+        <h3 id="dialog-title">Feature Notice</h3>
+        <p id="dialog-message">
+          This feature is currently being built and will be available soon.
+        </p>
+        <button id="close-feature-dialog" class="btn primary">Got it</button>
       </div>
-  </dialog>
-  <footer class="footer">
-    <div class="footer-content">
-      <p>© 2026 Alejandro Alas. All rights reserved.</p>
-      <div class="social-links">
-        <a href="https://github.com/aalassv" target="_blank" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path
-              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-            </path>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/alejandro-alas-/" target="_blank" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-            <rect x="2" y="9" width="4" height="12"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg>
-        </a>
-        <a href="mailto:a.alas.sv@gmail.com" aria-label="Email">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-        </a>
+    </dialog>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>© 2026 Alejandro Alas. All rights reserved.</p>
+        <div class="social-links">
+          <a
+            href="https://github.com/aalassv"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/alejandro-alas-/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              ></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="mailto:a.alas.sv@gmail.com" aria-label="Email">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
       </div>
-    </div>
-  </footer>
-  <script src="/js/main.js?v=1"></script>
-</body>
-
+    </footer>
+    <script src="/js/main.js?v=1"></script>
+  </body>
 </html>
