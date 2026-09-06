@@ -10,6 +10,12 @@ A lightweight, high-performance personal portfolio built with Vanilla HTML, CSS,
 - **Vanilla CSS3** with Flexbox/Grid and CSS variables for theming.
 - **Light/Dark Mode Toggle** utilizing local storage.
 - **Mobile-first Responsive Design.**
+- **Communily landing page** (`communily.html`) — a standalone product page promoting Communily, a self-hosted
+  charity/nonprofit management platform built and maintained separately from this portfolio. Covers current
+  features, the product roadmap, planned integrations, and two service tiers (Community / Growth). Styled with its
+  own stylesheet (`css/communily.css`) layered on top of the shared design tokens in `css/style.css`; no existing
+  page styling was modified. A "Communily" call-to-action button was added to the navbar on every existing page so
+  visitors can reach it from anywhere on the site.
 
 ## Tech Stack
 - HTML5

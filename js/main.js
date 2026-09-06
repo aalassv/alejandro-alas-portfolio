@@ -56,6 +56,64 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// --- Bold Animation System ---
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
+
+if (!prefersReducedMotion) {
+  // Reactive gradient mesh background, follows the cursor
+  const mesh = document.querySelector(".bg-mesh");
+  if (mesh) {
+    window.addEventListener("mousemove", (e) => {
+      const xPct = (e.clientX / window.innerWidth) * 100;
+      const yPct = (e.clientY / window.innerHeight) * 100;
+      mesh.style.setProperty("--mx", xPct + "%");
+      mesh.style.setProperty("--my", yPct + "%");
+    });
+  }
+
+  // Magnetic buttons: pull toward the cursor within their bounds
+  document.querySelectorAll(".btn").forEach((btn) => {
+    btn.addEventListener("mousemove", (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      btn.style.transform = `translate(${x * 0.15}px, ${y * 0.25}px)`;
+    });
+    btn.addEventListener("mouseleave", () => {
+      btn.style.transform = "translate(0,0)";
+    });
+  });
+
+  // 3D tilt for project cards
+  document.querySelectorAll(".apple-card").forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rotateX = ((y - cy) / cy) * -4;
+      const rotateY = ((x - cx) / cx) * 4;
+      card.style.transform = `scale(1.02) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+    });
+  });
+}
+
+// Sticky navbar glow/blur on scroll (always on, cheap and no motion issue)
+const navbar = document.querySelector(".navbar");
+if (navbar) {
+  const setNavbarState = () => {
+    navbar.classList.toggle("scrolled", window.scrollY > 20);
+  };
+  window.addEventListener("scroll", setNavbarState);
+  setNavbarState();
+}
+
 // --- Clickable Cards ---
 const projectCards = document.querySelectorAll(".apple-card");
 
