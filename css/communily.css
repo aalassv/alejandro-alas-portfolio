@@ -1,0 +1,330 @@
+/* =========================================
+   COMMUNILY LANDING PAGE STYLES
+   Extends the design tokens in style.css.
+   Do not duplicate resets/typography/navbar/footer rules here.
+   ========================================= */
+
+.communily-page .hero-section {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.communily-logo-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+}
+
+.communily-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+.communily-hero-badge .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+}
+
+/* --- Section shell --- */
+.communily-section {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3.5rem 5%;
+}
+
+.communily-section-head {
+    max-width: 640px;
+    margin-bottom: 2.5rem;
+}
+
+.communily-section-head h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.communily-section-head p {
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+/* --- Proof strip --- */
+.proof-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 5%;
+    max-width: 1000px;
+    margin: 1rem auto 0 auto;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.proof-item .num {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+    display: block;
+}
+
+.proof-item .label {
+    color: var(--muted-2);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* --- Feature grid --- */
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 1.75rem;
+    position: relative;
+}
+
+.feature-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.feature-status {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    margin-bottom: 0.85rem;
+}
+
+.feature-status.live {
+    background: color-mix(in srgb, var(--green) 18%, transparent);
+    color: var(--green);
+}
+
+.feature-status.building {
+    background: color-mix(in srgb, var(--blue) 18%, transparent);
+    color: var(--blue);
+}
+
+.feature-status.planned {
+    background: color-mix(in srgb, var(--yellow) 18%, transparent);
+    color: var(--yellow);
+}
+
+/* --- Roadmap timeline --- */
+.roadmap-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-left: 2px solid var(--border);
+    margin-left: 0.5rem;
+}
+
+.roadmap-item {
+    position: relative;
+    padding: 0 0 2rem 1.75rem;
+}
+
+.roadmap-item:last-child {
+    padding-bottom: 0;
+}
+
+.roadmap-item::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--blue);
+}
+
+.roadmap-item.done::before {
+    background: var(--green);
+    border-color: var(--green);
+}
+
+.roadmap-phase {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted-2);
+    margin-bottom: 0.35rem;
+}
+
+.roadmap-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.roadmap-item p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* --- Integrations --- */
+.integration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.integration-badge {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+}
+
+.integration-badge .name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.integration-badge .tag {
+    font-size: 0.7rem;
+    color: var(--muted-2);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* --- Pricing tiers --- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+.pricing-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.highlight {
+    border-color: var(--blue);
+    box-shadow: 0 10px 40px rgba(91, 141, 239, 0.15);
+}
+
+.pricing-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--blue);
+    margin-bottom: 0.75rem;
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.pricing-price {
+    font-size: 1rem;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+}
+
+.pricing-price strong {
+    font-size: 1.8rem;
+    color: var(--text);
+    font-weight: 800;
+}
+
+.pricing-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.pricing-list li {
+    font-size: 0.92rem;
+    color: var(--muted);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.pricing-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 800;
+}
+
+/* --- Final CTA band --- */
+.cta-band {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 1000px;
+    margin: 1rem auto 3rem auto;
+}
+
+.cta-band h2 {
+    font-size: 1.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.cta-band p {
+    color: var(--muted);
+    max-width: 50ch;
+    margin: 0 auto 1.75rem auto;
+}
+
+.cta-band .action-links {
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .communily-section-head h2 {
+        font-size: 2.3rem;
+    }
+}

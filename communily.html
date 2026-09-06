@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Communily — a self-hosted charity and nonprofit management platform. Members, volunteers, services, and soon donations, fundraising, and Gift Aid, built by Alejandro Alas.">
+    <title>Communily | Charity & Nonprofit Management Platform</title>
+    <link rel="canonical" href="https://aalas-dev.netlify.app/communily.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Communily | Charity & Nonprofit Management Platform">
+    <meta property="og:description"
+        content="A self-hosted charity and nonprofit management platform: members, volunteers, services, and a growing set of fundraising and donor tools.">
+    <meta property="og:url" content="https://aalas-dev.netlify.app/communily.html">
+    <meta property="og:image" content="https://aalas-dev.netlify.app/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css?v=1">
+    <link rel="stylesheet" href="/css/communily.css?v=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="communily-page">
+    <div class="bg-mesh"></div>
+    <div class="bg-noise"></div>
+    <header class="navbar">
+        <div class="logo">
+            <a href="/index.html">✦ Alejandro Alas</a>
+        </div>
+        <nav class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/about.html">About</a>
+        </nav>
+        <div class="nav-controls">
+            <a href="/communily.html" class="btn primary nav-communily-btn">Communily</a>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark theme">
+                <span class="theme-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </span>
+            </button>
+
+            <button class="hamburger" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="9" x2="20" y2="9"></line>
+                    <line x1="4" y1="15" x2="20" y2="15"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <main class="hero-section">
+        <div class="communily-logo-mark">◆ Communily</div>
+        <div class="communily-hero-badge"><span class="dot"></span> Already running for real charities in Scotland</div>
+        <h1>One platform to run your <span class="pearl">charity's operations</span>, not five disconnected tools.</h1>
+        <p class="subtitle">
+            Communily is a self-hosted platform for charities and community organisations: members, volunteers,
+            services, visits, tasks, and reporting today — with donations, fundraising, Gift Aid, and payment
+            processing on the roadmap. One deployment, your data, your server.
+        </p>
+        <div class="stat-strip">
+            <span>Self-hosted, your infrastructure</span>
+            <span>Built for UK & Scottish charities</span>
+            <span>Two support tiers</span>
+        </div>
+        <div class="action-links">
+            <a href="mailto:a.alas.sv@gmail.com?subject=Communily%20enquiry" class="btn primary">Book a conversation</a>
+            <a href="#pricing" class="btn secondary">See tiers</a>
+        </div>
+    </main>
+
+    <!-- Proof strip -->
+    <section class="proof-strip">
+        <div class="proof-item">
+            <span class="num">350+</span>
+            <span class="label">members managed at Castlemilk Pantry</span>
+        </div>
+        <div class="proof-item">
+            <span class="num">50%</span>
+            <span class="label">reduction in service queues at Auldhouse</span>
+        </div>
+        <div class="proof-item">
+            <span class="num">100%</span>
+            <span class="label">self-hosted — your data never leaves your server</span>
+        </div>
+    </section>
+
+    <!-- What it does today -->
+    <section class="communily-section" id="features">
+        <div class="communily-section-head">
+            <p class="eyebrow">What's already built</p>
+            <h2>Everything your team needs to run day-to-day operations</h2>
+            <p>Communily grew out of real deployments for a food pantry and a community church — every feature below
+                is already in production, not a mockup.</p>
+        </div>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <span class="feature-status live">Live</span>
+                <h3>Member & beneficiary records</h3>
+                <p>Profiles, dependents, household and housing data, digital QR-based member cards for quick
+                    check-in.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-status live">Live</span>
+                <h3>Services & visit tracking</h3>
+                <p>Assign services, log visits, and review demographic and service-activity trends over time.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-status live">Live</span>
+                <h3>Volunteer coordination</h3>
+                <p>Activities, shifts, signups, attendance, availability, and leave requests — a full volunteering
+                    workflow, not a bolt-on.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-status live">Live</span>
+                <h3>Tasks & internal workflow</h3>
+                <p>Assignees, to-do items, comments, activity history, attachments, and notifications for staff.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-status live">Live</span>
+                <h3>Reporting & Excel export</h3>
+                <p>Daily, monthly, custom, and quarterly funder reports, exported straight to Excel.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-status live">Live</span>
+                <h3>Role-based access</h3>
+                <p>Admin, assistant, and volunteer roles with database-backed permissions and invite-led staff
+                    onboarding.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="communily-section" id="roadmap">
+        <div class="communily-section-head">
+            <p class="eyebrow">What's coming</p>
+            <h2>A clear roadmap toward full fundraising support</h2>
+            <p>Communily is being extended deliberately, in an order that keeps compliance-sensitive work — payments
+                and Gift Aid — ahead of anything that depends on it.</p>
+        </div>
+        <div class="roadmap-list">
+            <div class="roadmap-item">
+                <div class="roadmap-phase">Next</div>
+                <h3>Donor records, separate from members</h3>
+                <p>A dedicated donor profile — distinct from your existing beneficiary members — with communication
+                    preferences and Gift Aid declarations.</p>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-phase">Then</div>
+                <h3>Payments & Gift Aid</h3>
+                <p>Stripe and GoCardless integration for donations and event payments, with automatic Gift Aid
+                    eligibility tracking and HMRC-format exports.</p>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-phase">Then</div>
+                <h3>Fundraising campaigns</h3>
+                <p>Public donation pages, campaign tracking, and donor segmentation for targeted appeals.</p>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-phase">Then</div>
+                <h3>Communications & automation</h3>
+                <p>Templated email campaigns and automatic triggers — a thank-you email sent the moment a donation
+                    lands.</p>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-phase">Later</div>
+                <h3>Event management</h3>
+                <p>Registration, ticketing, and attendee communication, building on the existing activities and
+                    scheduling engine.</p>
+            </div>
+            <div class="roadmap-item">
+                <div class="roadmap-phase">Later</div>
+                <h3>Accounting sync</h3>
+                <p>Xero and QuickBooks integration so donation and income data reconciles automatically.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations -->
+    <section class="communily-section" id="integrations">
+        <div class="communily-section-head">
+            <p class="eyebrow">Integrations</p>
+            <h2>Built around the tools UK charities already use</h2>
+            <p>No PCI scope on your server — payments run through hosted checkout pages, and your data stays on your
+                own infrastructure.</p>
+        </div>
+        <div class="integration-grid">
+            <div class="integration-badge">
+                <span class="name">Stripe</span>
+                <span class="tag">Planned</span>
+            </div>
+            <div class="integration-badge">
+                <span class="name">GoCardless</span>
+                <span class="tag">Planned</span>
+            </div>
+            <div class="integration-badge">
+                <span class="name">Xero</span>
+                <span class="tag">Planned</span>
+            </div>
+            <div class="integration-badge">
+                <span class="name">QuickBooks</span>
+                <span class="tag">Planned</span>
+            </div>
+            <div class="integration-badge">
+                <span class="name">HMRC Gift Aid</span>
+                <span class="tag">Planned</span>
+            </div>
+            <div class="integration-badge">
+                <span class="name">SMS & Email</span>
+                <span class="tag">Live</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="communily-section" id="pricing">
+        <div class="communily-section-head">
+            <p class="eyebrow">Tiers</p>
+            <h2>Two ways to work with Communily</h2>
+            <p>Every deployment is self-hosted on your own server, one installation per organisation — your data
+                never sits on shared infrastructure.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-tag">Community</div>
+                <h3>Community</h3>
+                <div class="pricing-price">Pro-bono / low-cost<br><strong>By arrangement</strong></div>
+                <ul class="pricing-list">
+                    <li>Full core platform: members, services, visits, volunteers, tasks, reporting</li>
+                    <li>Self-hosted deployment on your infrastructure</li>
+                    <li>Reserved for the community organisations and causes I already support</li>
+                    <li>Best-effort support and updates</li>
+                </ul>
+                <a href="mailto:a.alas.sv@gmail.com?subject=Communily%20Community%20tier" class="btn secondary">Ask
+                    about eligibility</a>
+            </div>
+            <div class="pricing-card highlight">
+                <div class="pricing-tag">Growth</div>
+                <h3>Growth</h3>
+                <div class="pricing-price">Setup fee + monthly support<br><strong>Custom quote</strong></div>
+                <ul class="pricing-list">
+                    <li>Everything in Community, plus priority delivery of new modules as they ship</li>
+                    <li>Dedicated setup, migration, and staff onboarding</li>
+                    <li>Ongoing maintenance, monitoring, and update retainer</li>
+                    <li>Early access to donations, Gift Aid, and fundraising features as they're released</li>
+                    <li>Direct support channel</li>
+                </ul>
+                <a href="mailto:a.alas.sv@gmail.com?subject=Communily%20Growth%20tier" class="btn primary">Get a
+                    quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="communily-section">
+        <div class="cta-band">
+            <h2>Already running a charity on spreadsheets and three separate tools?</h2>
+            <p>Let's talk about what a single, self-hosted system could look like for your organisation.</p>
+            <div class="action-links">
+                <a href="mailto:a.alas.sv@gmail.com?subject=Communily%20enquiry" class="btn primary">Get in touch</a>
+                <a href="/projects.html" class="btn secondary">See past projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Alejandro Alas. All rights reserved.</p>
+
+            <div class="social-links">
+                <a href="https://github.com/aalassv" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/alejandro-alas-/" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="mailto:a.alas.sv@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/main.js?v=1"></script>
+</body>
+
+</html>
