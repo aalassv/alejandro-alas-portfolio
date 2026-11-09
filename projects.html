@@ -8,6 +8,7 @@
         (function () {
             var t = localStorage.getItem("theme") || "dark";
             document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.classList.add("js");
         })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,14 +59,14 @@
         </div>
     </header>
     <main id="main" class="projects-container">
-        <p class="eyebrow">Selected Work</p>
-        <h1 class="page-title">Full Stack & Custom Engineering</h1>
-        <p class="about-content">
+        <p class="eyebrow reveal">Selected Work</p>
+        <h1 class="page-title reveal">Full Stack &amp; Custom Engineering</h1>
+        <p class="about-content reveal">
             Practical IT experience helps me understand both the technical architecture and the user's end goal,
             resulting in software that solves real problems. Here is my recent work.</p>
-        <div class="projects-grid">
+        <div class="projects-grid" data-reveal-stagger>
 
-            <article class="apple-card">
+            <article class="apple-card reveal">
                 <div class="card-content">
                     <span class="card-category">Full Stack Development</span>
                     <h3>Castlemilk Pantry</h3>
@@ -95,7 +96,7 @@
             </article>
 
 
-            <article class="apple-card">
+            <article class="apple-card reveal">
                 <div class="card-content">
                     <span class="card-category">Full Stack Development</span>
                     <h3>Auldhouse Community Church</h3>
@@ -124,7 +125,7 @@
                     </svg>
                 </a>
             </article>
-            <article class="apple-card">
+            <article class="apple-card reveal">
                 <div class="card-content">
                     <span class="card-category">Full Stack Development</span>
                     <h3>Bikes for Refugees</h3>
@@ -154,7 +155,7 @@
                 </a>
             </article>
 
-            <article class="apple-card">
+            <article class="apple-card reveal">
                 <div class="card-content">
                     <span class="card-category">Frontend & Fundamentals</span>
                     <h3>Developer Portfolio</h3>
@@ -186,16 +187,14 @@
         </div>
 
 
-        <h1 class="page-title" style="padding-top:32px; " >WordPress & CMS Delivery</h1>
-        <p class="about-content">
+        <h1 class="page-title reveal" style="padding-top:32px;">WordPress &amp; CMS Delivery</h1>
+        <p class="about-content reveal">
             Custom web production and digital solutions built using Elementor, WordPress, and cloud suite integrations
             for non-profit organizations and business clients.</p>
 
+        <div class="projects-grid" data-reveal-stagger>
 
-
-        <div class="projects-grid">
-
-            <article class="apple-card">
+            <article class="apple-card reveal">
                 <div class="card-content">
                     <span class="card-category">Web & IT Infrastructure</span>
                     <h3>Go Deep Scotland</h3>
@@ -223,7 +222,7 @@
                 </a>
             </article>
 
-            <article class="apple-card">
+            <article class="apple-card reveal">
                 <div class="card-content">
                     <span class="card-category">Digital Delivery</span>
                     <h3>Cross Ethnic Community</h3>

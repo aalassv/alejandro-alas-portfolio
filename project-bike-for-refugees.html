@@ -8,6 +8,7 @@
       (function () {
         var t = localStorage.getItem("theme") || "dark";
         document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.classList.add("js");
       })();
     </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +65,7 @@
 
   <!-- Case Study Content -->
   <div class="wrap case-study">
-    <div class="hero">
+    <div class="hero reveal">
       <div class="eyebrow">Case Study · CodeYourFuture Final Project</div>
       <h1>Bikes for Refugees</h1>
       <p class="tagline">A waiting-list and SMS booking system built for a Glasgow bike charity replacing
@@ -104,16 +105,16 @@
             area — which fed into an Excel waiting list. With limited staff splitting time between bike repairs,
             paperwork, and admin, there was little time to work through that list. Waits of two months were typical;
             some people waited six months or more.</p>
-          <div class="meta-grid">
-            <div class="meta-card">
+          <div class="meta-grid" data-reveal-stagger>
+            <div class="meta-card reveal">
               <div class="k">Client</div>
               <div class="v">Bikes for Refugees, Glasgow</div>
             </div>
-            <div class="meta-card">
+            <div class="meta-card reveal">
               <div class="k">Timeline</div>
               <div class="v">2022 — 4-week CYF sprint, completed post-graduation</div>
             </div>
-            <div class="meta-card">
+            <div class="meta-card reveal">
               <div class="k">Team</div>
               <div class="v">Houda Issa, Tara Quinn &amp; me, with Mike (Workshop Manager)</div>
             </div>
@@ -210,7 +211,7 @@
           <div class="section-label">05 — Key Features</div>
           <h2>What the system does</h2>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 01</div>
               <h3>CSV upload → waiting list database</h3>
@@ -226,7 +227,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 02</div>
               <h3>Bulk SMS booking invites</h3>
@@ -240,7 +241,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 03</div>
               <h3>Self-service booking page</h3>
@@ -258,7 +259,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 04</div>
               <h3>Colour-coded status tracking</h3>
@@ -272,7 +273,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 05</div>
               <h3>Two-week bookings view</h3>
@@ -286,7 +287,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 06</div>
               <h3>Collection &amp; delivery confirmation</h3>
@@ -346,20 +347,20 @@
           <p class="lede">The app helped Bikes for Refugees deliver 500 bikes with the app and 2000 by the end of 2022 a result of the
             charity's staff and workshop team, made significantly easier by removing manual booking calls from their
             day.</p>
-          <div class="impact-grid">
-            <div class="impact-stat">
+          <div class="impact-grid" data-reveal-stagger>
+            <div class="impact-stat reveal">
               <div class="num">500</div>
               <div class="label">bikes delivered by end of 2022</div>
             </div>
-            <div class="impact-stat">
+            <div class="impact-stat reveal">
               <div class="num">30%</div>
               <div class="label">reduction in daily administrative workload</div>
             </div>
-            <div class="impact-stat">
+            <div class="impact-stat reveal">
               <div class="num">1 of 1</div>
               <div class="label">team in our cohort to ship a real client app</div>
             </div>
-            <div class="impact-stat">
+            <div class="impact-stat reveal">
               <div class="num">20 min</div>
               <div class="label">per manual call, eliminated by bulk SMS</div>
             </div>

@@ -72,6 +72,35 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", setActive, { passive: true });
     setActive();
   }
+
+  // Subtle reveal-on-scroll (progressive enhancement)
+  const revealEls = document.querySelectorAll(".reveal");
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (revealEls.length > 0) {
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      revealEls.forEach((el) => el.classList.add("is-visible"));
+    } else {
+      // Stagger children within marked groups
+      document.querySelectorAll("[data-reveal-stagger]").forEach((group) => {
+        const kids = group.querySelectorAll(":scope > .reveal");
+        kids.forEach((kid, i) => {
+          kid.style.setProperty("--reveal-delay", Math.min(i * 60, 240) + "ms");
+        });
+      });
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      );
+      revealEls.forEach((el) => io.observe(el));
+    }
+  }
 });
 
 const navbar = document.querySelector(".navbar");
