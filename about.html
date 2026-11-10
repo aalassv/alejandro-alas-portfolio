@@ -8,6 +8,7 @@
       (function () {
         var t = localStorage.getItem("theme") || "dark";
         document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.classList.add("js");
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,28 +58,29 @@
             </button>
         </div>
     </header>
-    <main id="main" class="hero-section">
-        <h1 class="page-title">About Me</h1>
+    <main id="main" class="hero-section" data-reveal-stagger>
+        <h1 class="page-title reveal">About Me</h1>
         <div class="about-content">
-            <p>
+            <p class="reveal">
                 My journey in tech started at the hardware level. With a background as a computer maintenance technician
                 and 16 years of experience in technical infrastructure, I have a deep understanding of how systems
                 operate from the ground up.
             </p>
-            <p>
+            <p class="reveal">
                 Currently, I am pursuing my BSc in Software Engineering at the University of Glasgow. My technical focus
                 is on modern full-stack development, specifically building robust applications with the PERN stack and
                 orchestrating deployments using Docker.
             </p>
-            <p>
+            <p class="reveal">
                 Beyond enterprise infrastructure, I believe in technology's power to build community. I volunteer as an
                 IT Lead and digital literacy mentor, designing digital systems that help local organizations scale their
                 impact and streamline their operations.
             </p>
-            <p>
+            <p class="reveal">
                 When I am away from the keyboard and terminal, you will likely find me in the workshop meticulously
                 sourcing parts and building high-performance gravel bikes from the bare carbon frame up.
             </p>
+            <p class="about-alt-cv reveal">Also available: <a href="/assets/Alejandro_Alas_CV_IT_2026.pdf" target="_blank" rel="noopener noreferrer">IT Infrastructure CV (PDF)</a></p>
         </div>
     </main>
 

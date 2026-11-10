@@ -8,6 +8,7 @@
       (function () {
         var t = localStorage.getItem("theme") || "dark";
         document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.classList.add("js");
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,7 +63,7 @@
 
     <!-- Case Study Content -->
     <div class="wrap case-study">
-      <div class="hero">
+      <div class="hero reveal">
         <div class="eyebrow">Case Study · Full Stack Development</div>
         <h1>Auldhouse Community Church</h1>
         <p class="tagline">An attendance and cycle-verification system built for a church food bank replacing
@@ -101,16 +102,16 @@
             Thursday to see whether each visitor was in the right cycle to collect a parcel 1, 2, 3 or 4 weeks apart
             depending on the household. That manual check created long queues, with people waiting outside in the
             rain while staff cross-referenced names by hand.</p>
-          <div class="meta-grid">
-            <div class="meta-card">
+          <div class="meta-grid" data-reveal-stagger>
+            <div class="meta-card reveal">
               <div class="k">Client</div>
               <div class="v">Auldhouse Community Church Food Bank</div>
             </div>
-            <div class="meta-card">
+            <div class="meta-card reveal">
               <div class="k">Timeline</div>
               <div class="v">Jun 2023 – Jul 2024 launch, ongoing</div>
             </div>
-            <div class="meta-card">
+            <div class="meta-card reveal">
               <div class="k">Team</div>
               <div class="v">Me + Leadership (Claire, then Roma Madden)</div>
             </div>
@@ -187,7 +188,7 @@
           <div class="section-label">05 — Key Features</div>
           <h2>What the system does</h2>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 01</div>
               <h3>Attendance &amp; cycle verification lookup</h3>
@@ -203,7 +204,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 02</div>
               <h3>Membership database</h3>
@@ -217,7 +218,7 @@
           </div>
 
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 03</div>
               <h3>Reporting</h3>
@@ -230,7 +231,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 04</div>
               <h3>Automated weekly digest email</h3>
@@ -242,7 +243,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 05</div>
               <h3>Dashboard</h3>
@@ -298,20 +299,20 @@
           <h2>What changed</h2>
           <p class="lede">Launched July 2024, replacing a paper-based doorway check that had run for years and caused
             real discontent among people already dealing with hardship.</p>
-          <div class="impact-grid">
-            <div class="impact-stat">
+          <div class="impact-grid" data-reveal-stagger>
+            <div class="impact-stat reveal">
               <div class="num">100%</div>
               <div class="label">of paper cycle-tracking sheets replaced</div>
             </div>
-            <div class="impact-stat">
+            <div class="impact-stat reveal">
               <div class="num">4</div>
               <div class="label">visit cycles supported: 1 / 2 / 3 / 4 week</div>
             </div>
-            <div class="impact-stat">
+            <div class="impact-stat reveal">
               <div class="num">2yr+</div>
               <div class="label">in active production use since Jul 2024</div>
             </div>
-            <div class="impact-stat">
+            <div class="impact-stat reveal">
               <div class="num">EC2→VPS</div>
               <div class="label">hosting migrated to cut ongoing costs</div>
             </div>

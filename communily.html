@@ -18,7 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/communily.css?v=6">
+    <link rel="stylesheet" href="/css/communily.css?v=7">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
     <a class="c-skip-link" href="#main">Skip to content</a>
@@ -48,15 +49,15 @@
     <main id="main">
         <!-- Hero -->
         <section class="c-hero">
-            <div class="c-container c-hero__inner">
-                <p class="c-eyebrow">Self-hosted CRM for charities &amp; community organisations</p>
-                <h1>One platform to run your charity's operations, not five disconnected tools.</h1>
-                <p class="c-lead">Communily brings members, volunteers, services, visits, tasks, and reporting into a single deployment on <strong>your own server</strong> — with donations, fundraising, and Gift Aid on a clear roadmap. Built for UK and Scottish charities.</p>
-                <div class="c-cta-row">
+            <div class="c-container c-hero__inner" data-c-reveal-stagger>
+                <p class="c-eyebrow c-reveal">Self-hosted CRM for charities &amp; community organisations</p>
+                <h1 class="c-reveal">One platform to run your charity's operations, not five disconnected tools.</h1>
+                <p class="c-lead c-reveal">Communily brings members, volunteers, services, visits, tasks, and reporting into a single deployment on <strong>your own server</strong> — with donations, fundraising, and Gift Aid on a clear roadmap. Built for UK and Scottish charities.</p>
+                <div class="c-cta-row c-reveal">
                     <a href="mailto:a.alas.sv@gmail.com?subject=Communily%20enquiry" class="c-btn c-btn--primary">Book a conversation</a>
                     <a href="#pricing" class="c-btn c-btn--secondary">See tiers</a>
                 </div>
-                <ul class="c-trust-pills" aria-label="Key facts">
+                <ul class="c-trust-pills c-reveal" aria-label="Key facts">
                     <li>Self-hosted, your infrastructure</li>
                     <li>Your data never leaves your server</li>
                     <li>Already running for real charities in Scotland</li>
@@ -68,17 +69,17 @@
         <section class="c-section c-section--alt" aria-labelledby="proof-heading">
             <div class="c-container">
                 <h2 id="proof-heading" class="c-visually-hidden">Proof and outcomes</h2>
-                <div class="c-stats">
-                    <div class="c-stat">
-                        <p class="c-stat__num">350+</p>
+                <div class="c-stats" data-c-reveal-stagger>
+                    <div class="c-stat c-reveal">
+                        <p class="c-stat__num" data-c-count>350+</p>
                         <p class="c-stat__label">members managed at Castlemilk Pantry</p>
                     </div>
-                    <div class="c-stat">
-                        <p class="c-stat__num">50%</p>
+                    <div class="c-stat c-reveal">
+                        <p class="c-stat__num" data-c-count>50%</p>
                         <p class="c-stat__label">reduction in service queues at Auldhouse</p>
                     </div>
-                    <div class="c-stat">
-                        <p class="c-stat__num">100%</p>
+                    <div class="c-stat c-reveal">
+                        <p class="c-stat__num" data-c-count>100%</p>
                         <p class="c-stat__label">self-hosted — your data stays on your server</p>
                     </div>
                 </div>
@@ -88,38 +89,38 @@
         <!-- What it does today -->
         <section class="c-section" id="features" aria-labelledby="features-heading">
             <div class="c-container">
-                <div class="c-section-head">
+                <div class="c-section-head c-reveal">
                     <p class="c-eyebrow">What’s already built</p>
                     <h2 id="features-heading">Everything your team needs to run day-to-day operations</h2>
                     <p>Communily grew out of real deployments for a food pantry and a community church — every capability below is in production, not a mockup.</p>
                 </div>
-                <div class="c-grid c-grid--3">
-                    <article class="c-card">
+                <div class="c-grid c-grid--3 data-c-reveal-stagger">>
+                    <article class="c-card c-reveal">
                         <span class="c-badge c-badge--live">Live</span>
                         <h3>Member &amp; beneficiary records</h3>
                         <p>Profiles, dependents, household and housing data, plus digital QR-based member cards for quick check-in.</p>
                     </article>
-                    <article class="c-card">
+                    <article class="c-card c-reveal">
                         <span class="c-badge c-badge--live">Live</span>
                         <h3>Services &amp; visit tracking</h3>
                         <p>Assign services, log visits, and review demographic and service-activity trends over time.</p>
                     </article>
-                    <article class="c-card">
+                    <article class="c-card c-reveal">
                         <span class="c-badge c-badge--live">Live</span>
                         <h3>Volunteer coordination</h3>
                         <p>Activities, shifts, signups, attendance, availability, and leave requests — a full volunteering workflow, not a bolt-on.</p>
                     </article>
-                    <article class="c-card">
+                    <article class="c-card c-reveal">
                         <span class="c-badge c-badge--live">Live</span>
                         <h3>Tasks &amp; internal workflow</h3>
                         <p>Assignees, to-do items, comments, activity history, attachments, and notifications for staff.</p>
                     </article>
-                    <article class="c-card">
+                    <article class="c-card c-reveal">
                         <span class="c-badge c-badge--live">Live</span>
                         <h3>Reporting &amp; Excel export</h3>
                         <p>Daily, monthly, custom, and quarterly funder reports, exported straight to Excel.</p>
                     </article>
-                    <article class="c-card">
+                    <article class="c-card c-reveal">
                         <span class="c-badge c-badge--live">Live</span>
                         <h3>Role-based access</h3>
                         <p>Admin, assistant, and volunteer roles with database-backed permissions and invite-led staff onboarding.</p>
@@ -131,23 +132,23 @@
         <!-- How it works / who it's for -->
         <section class="c-section c-section--alt" id="how" aria-labelledby="how-heading">
             <div class="c-container">
-                <div class="c-section-head">
+                <div class="c-section-head c-reveal">
                     <p class="c-eyebrow">How it works</p>
                     <h2 id="how-heading">Built for charities, deployed on your terms</h2>
                     <p>A practical system for organisations that need reliable operations and full control of their data.</p>
                 </div>
-                <div class="c-grid c-grid--3">
-                    <article class="c-card c-card--plain">
+                <div class="c-grid c-grid--3 data-c-reveal-stagger">>
+                    <article class="c-card c-card--plain c-reveal">
                         <p class="c-step-num" aria-hidden="true">1</p>
                         <h3>One deployment, per organisation</h3>
                         <p>Communily is installed for your organisation on your own infrastructure — not shared multi-tenant hosting — so your records stay under your control.</p>
                     </article>
-                    <article class="c-card c-card--plain">
+                    <article class="c-card c-card--plain c-reveal">
                         <p class="c-step-num" aria-hidden="true">2</p>
                         <h3>Run daily operations in one place</h3>
                         <p>Replace spreadsheets and disconnected tools with a single workflow for members, services, volunteers, tasks, and funder-ready reporting.</p>
                     </article>
-                    <article class="c-card c-card--plain">
+                    <article class="c-card c-card--plain c-reveal">
                         <p class="c-step-num" aria-hidden="true">3</p>
                         <h3>Grow into fundraising, safely</h3>
                         <p>Donor records, payments, and Gift Aid are added in a deliberate order — compliance-sensitive work comes before anything that depends on it.</p>
@@ -159,38 +160,38 @@
         <!-- Roadmap -->
         <section class="c-section" id="roadmap" aria-labelledby="roadmap-heading">
             <div class="c-container c-narrow">
-                <div class="c-section-head">
+                <div class="c-section-head c-reveal">
                     <p class="c-eyebrow">What’s coming</p>
                     <h2 id="roadmap-heading">A clear roadmap toward full fundraising support</h2>
                     <p>Communily is extended deliberately, in an order that keeps compliance-sensitive work — payments and Gift Aid — ahead of anything that depends on it.</p>
                 </div>
-                <ol class="c-roadmap">
-                    <li class="c-roadmap__item">
+                <ol class="c-roadmap" data-c-reveal-stagger>
+                    <li class="c-roadmap__item c-reveal">
                         <p class="c-roadmap__phase">Next</p>
                         <h3>Donor records, separate from members</h3>
                         <p>A dedicated donor profile — distinct from your existing beneficiary members — with communication preferences and Gift Aid declarations.</p>
                     </li>
-                    <li class="c-roadmap__item">
+                    <li class="c-roadmap__item c-reveal">
                         <p class="c-roadmap__phase">Then</p>
                         <h3>Payments &amp; Gift Aid</h3>
                         <p>Stripe and GoCardless integration for donations and event payments, with automatic Gift Aid eligibility tracking and HMRC-format exports.</p>
                     </li>
-                    <li class="c-roadmap__item">
+                    <li class="c-roadmap__item c-reveal">
                         <p class="c-roadmap__phase">Then</p>
                         <h3>Fundraising campaigns</h3>
                         <p>Public donation pages, campaign tracking, and donor segmentation for targeted appeals.</p>
                     </li>
-                    <li class="c-roadmap__item">
+                    <li class="c-roadmap__item c-reveal">
                         <p class="c-roadmap__phase">Then</p>
                         <h3>Communications &amp; automation</h3>
                         <p>Templated email campaigns and automatic triggers — a thank-you email sent the moment a donation lands.</p>
                     </li>
-                    <li class="c-roadmap__item">
+                    <li class="c-roadmap__item c-reveal">
                         <p class="c-roadmap__phase">Later</p>
                         <h3>Event management</h3>
                         <p>Registration, ticketing, and attendee communication, building on the existing activities and scheduling engine.</p>
                     </li>
-                    <li class="c-roadmap__item">
+                    <li class="c-roadmap__item c-reveal">
                         <p class="c-roadmap__phase">Later</p>
                         <h3>Accounting sync</h3>
                         <p>Xero and QuickBooks integration so donation and income data reconciles automatically.</p>
@@ -202,18 +203,18 @@
         <!-- Integrations -->
         <section class="c-section c-section--alt" id="integrations" aria-labelledby="integrations-heading">
             <div class="c-container">
-                <div class="c-section-head">
+                <div class="c-section-head c-reveal">
                     <p class="c-eyebrow">Integrations</p>
                     <h2 id="integrations-heading">Built around the tools UK charities already use</h2>
                     <p>No PCI scope on your server — payments run through hosted checkout pages, and your data stays on your own infrastructure.</p>
                 </div>
-                <ul class="c-integrations" aria-label="Planned and live integrations">
-                    <li class="c-integration"><span class="c-integration__name">Stripe</span><span class="c-badge c-badge--planned">Planned</span></li>
-                    <li class="c-integration"><span class="c-integration__name">GoCardless</span><span class="c-badge c-badge--planned">Planned</span></li>
-                    <li class="c-integration"><span class="c-integration__name">Xero</span><span class="c-badge c-badge--planned">Planned</span></li>
-                    <li class="c-integration"><span class="c-integration__name">QuickBooks</span><span class="c-badge c-badge--planned">Planned</span></li>
-                    <li class="c-integration"><span class="c-integration__name">HMRC Gift Aid</span><span class="c-badge c-badge--planned">Planned</span></li>
-                    <li class="c-integration"><span class="c-integration__name">SMS &amp; Email</span><span class="c-badge c-badge--live">Live</span></li>
+                <ul class="c-integrations" data-c-reveal-stagger aria-label="Planned and live integrations">
+                    <li class="c-integration c-reveal"><span class="c-integration__name">Stripe</span><span class="c-badge c-badge--planned">Planned</span></li>
+                    <li class="c-integration c-reveal"><span class="c-integration__name">GoCardless</span><span class="c-badge c-badge--planned">Planned</span></li>
+                    <li class="c-integration c-reveal"><span class="c-integration__name">Xero</span><span class="c-badge c-badge--planned">Planned</span></li>
+                    <li class="c-integration c-reveal"><span class="c-integration__name">QuickBooks</span><span class="c-badge c-badge--planned">Planned</span></li>
+                    <li class="c-integration c-reveal"><span class="c-integration__name">HMRC Gift Aid</span><span class="c-badge c-badge--planned">Planned</span></li>
+                    <li class="c-integration c-reveal"><span class="c-integration__name">SMS &amp; Email</span><span class="c-badge c-badge--live">Live</span></li>
                 </ul>
             </div>
         </section>
@@ -221,13 +222,13 @@
         <!-- Pricing -->
         <section class="c-section" id="pricing" aria-labelledby="pricing-heading">
             <div class="c-container">
-                <div class="c-section-head c-section-head--center">
+                <div class="c-section-head c-section-head c-reveal--center">
                     <p class="c-eyebrow">Tiers</p>
                     <h2 id="pricing-heading">Two ways to work with Communily</h2>
                     <p>Every deployment is self-hosted on your own server, one installation per organisation — your data never sits on shared infrastructure.</p>
                 </div>
-                <div class="c-pricing">
-                    <article class="c-price-card">
+                <div class="c-pricing" data-c-reveal-stagger>
+                    <article class="c-price-card c-reveal">
                         <p class="c-price-card__tag">Community</p>
                         <h3>Community</h3>
                         <p class="c-price-card__price">Pro-bono / low-cost<br><strong>By arrangement</strong></p>
@@ -239,7 +240,7 @@
                         </ul>
                         <a href="mailto:a.alas.sv@gmail.com?subject=Communily%20Community%20tier" class="c-btn c-btn--secondary c-btn--block">Ask about eligibility</a>
                     </article>
-                    <article class="c-price-card c-price-card--featured">
+                    <article class="c-price-card c-price-card--featured c-reveal">
                         <p class="c-price-card__tag">Growth</p>
                         <h3>Growth</h3>
                         <p class="c-price-card__price">Setup fee + monthly support<br><strong>Custom quote</strong></p>
@@ -259,7 +260,7 @@
         <!-- Closing CTA -->
         <section class="c-section c-section--alt">
             <div class="c-container">
-                <div class="c-cta-band">
+                <div class="c-cta-band c-reveal">
                     <h2>Already running a charity on spreadsheets and disconnected tools?</h2>
                     <p>Let’s talk about what a single, self-hosted system could look like for your organisation.</p>
                     <div class="c-cta-row c-cta-row--center">
@@ -281,6 +282,6 @@
         </div>
     </footer>
 
-    <script src="/js/communily.js?v=1"></script>
+    <script src="/js/communily.js?v=2"></script>
 </body>
 </html>

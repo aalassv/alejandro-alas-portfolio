@@ -8,6 +8,7 @@
       (function () {
         var t = localStorage.getItem("theme") || "dark";
         document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.classList.add("js");
       })();
     </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +65,7 @@
 
   <!-- Case Study Content -->
   <div class="wrap case-study">
-    <div class="hero">
+    <div class="hero reveal">
       <div class="eyebrow">Case Study · Software Engineering</div>
       <h1>Castlemilk Pantry</h1>
       <p class="tagline">A membership app, shop eligibility-check, and reporting platform built for a community food
@@ -102,16 +103,16 @@
             shopping. Before this system existed, every part of running it, registering members, checking weekly shop
             eligibility,
             tracking user shops, and reporting to funders — was done by hand.</p>
-          <div class="meta-grid">
-            <div class="meta-card">
+          <div class="meta-grid" data-reveal-stagger>
+            <div class="meta-card reveal">
               <div class="k">Client</div>
               <div class="v">Castlemilk Pantry</div>
             </div>
-            <div class="meta-card">
+            <div class="meta-card reveal">
               <div class="k">Timeline</div>
               <div class="v">Mar 2023 – May 2025 launch</div>
             </div>
-            <div class="meta-card">
+            <div class="meta-card reveal">
               <div class="k">Team</div>
               <div class="v">Me + 2 Product Owners</div>
             </div>
@@ -196,7 +197,7 @@
           <div class="section-label">05 — Key Features</div>
           <h2>What the system does</h2>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 01</div>
               <h3>Membership database</h3>
@@ -211,7 +212,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 02</div>
               <h3>Automated onboarding</h3>
@@ -226,7 +227,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 03</div>
               <h3>Multi-type shop scanner</h3>
@@ -244,7 +245,7 @@
 
 
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 04</div>
               <h3>Reporting</h3>
@@ -258,7 +259,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 05</div>
               <h3>Dashboard</h3>
@@ -270,7 +271,7 @@
             </div>
           </div>
 
-          <div class="feature">
+          <div class="feature reveal">
             <div>
               <div class="feature-num">Feature 06</div>
               <h3>Member self-service profile</h3>
@@ -345,20 +346,20 @@
           <h2>What changed</h2>
           <p class="lede">Launched publicly in May 2025 after running quietly in parallel with the old Excel process, so
             staff could trust the new system before fully switching over.</p>
-          <div class="impact-grid">
-            <div class="impact-stat">
+          <div class="impact-grid" data-reveal-stagger>
+            <div class="impact-stat reveal">
               <div class="num">100%</div>
               <div class="label">of manual Excel tracking replaced</div>
             </div>
-            <div class="impact-stat">
+            <div class="impact-stat reveal">
               <div class="num">4</div>
               <div class="label">report cycles automated: daily → annual</div>
             </div>
-            <div class="impact-stat">
+            <div class="impact-stat reveal">
               <div class="num">2yr+</div>
               <div class="label">in active production use</div>
             </div>
-            <div class="impact-stat">
+            <div class="impact-stat reveal">
               <div class="num">1</div>
               <div class="label">client now funding hosting directly</div>
             </div>

@@ -7,6 +7,7 @@
       (function () {
         var t = localStorage.getItem("theme") || "dark";
         document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.classList.add("js");
       })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -102,7 +103,7 @@
 
     <!-- Case Study Content -->
     <div class="wrap case-study">
-      <div class="hero">
+      <div class="hero reveal">
         <div class="eyebrow">Case Study · Frontend & Fundamentals</div>
         <h1>Developer Portfolio</h1>
         <p class="tagline">
@@ -157,16 +158,16 @@
               framework, so I could hold total control over how it looks, loads,
               and behaves.
             </p>
-            <div class="meta-grid">
-              <div class="meta-card">
+            <div class="meta-grid" data-reveal-stagger>
+              <div class="meta-card reveal">
                 <div class="k">Client</div>
                 <div class="v">Myself</div>
               </div>
-              <div class="meta-card">
+              <div class="meta-card reveal">
                 <div class="k">Timeline</div>
                 <div class="v">Jun 2026 — 2-week build, ongoing refinement</div>
               </div>
-              <div class="meta-card">
+              <div class="meta-card reveal">
                 <div class="k">Team</div>
                 <div class="v">Solo — design, build, content, deployment</div>
               </div>
@@ -268,7 +269,7 @@
             <div class="section-label">05 — Key Features</div>
             <h2>What the site does and how, without a framework</h2>
 
-            <div class="feature">
+            <div class="feature reveal">
               <div>
                 <div class="feature-num">Feature 01</div>
                 <h3>Zero-dependency theme switching</h3>
@@ -305,7 +306,7 @@
               </div>
             </div>
 
-            <div class="feature">
+            <div class="feature reveal">
               <div>
                 <div class="feature-num">Feature 02</div>
                 <h3>Modal lightbox previews</h3>
@@ -342,7 +343,7 @@
               </div>
             </div>
 
-            <div class="feature">
+            <div class="feature reveal">
               <div>
                 <div class="feature-num">Feature 03</div>
                 <h3>Responsive CSS grid architecture</h3>
@@ -424,22 +425,22 @@
               UK, this site turned a dormant Figma file into the live home for
               every case study on this domain including this one.
             </p>
-            <div class="impact-grid">
-              <div class="impact-stat">
+            <div class="impact-grid" data-reveal-stagger>
+              <div class="impact-stat reveal">
                 <div class="num">2 weeks</div>
                 <div class="label">from Figma model to live site</div>
               </div>
-              <div class="impact-stat">
+              <div class="impact-stat reveal">
                 <div class="num">0</div>
                 <div class="label">frameworks or UI libraries used</div>
               </div>
-              <div class="impact-stat">
+              <div class="impact-stat reveal">
                 <div class="num">3+</div>
                 <div class="label">
                   real client case studies now hosted here
                 </div>
               </div>
-              <div class="impact-stat">
+              <div class="impact-stat reveal">
                 <div class="num">Ongoing</div>
                 <div class="label">actively refined since launch</div>
               </div>
