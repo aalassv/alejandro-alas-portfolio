@@ -126,6 +126,9 @@ strong { font-weight: 600; }
 .subtitle { font-size: clamp(1.0625rem, 2.2vw, 1.25rem); color: var(--color-muted); max-width: 62ch; margin-bottom: 1.5rem; }
 .about-content { color: var(--color-muted); font-size: 1.0625rem; max-width: 68ch; display: flex; flex-direction: column; gap: 0.25rem; }
 .about-content p { margin: 0 0 1rem; }
+.about-alt-cv { margin-top: 0.5rem; font-size: 0.9375rem; color: var(--color-faint); }
+.about-alt-cv a { color: var(--color-muted); text-decoration: underline; text-decoration-color: var(--color-border-strong); text-underline-offset: 3px; }
+.about-alt-cv a:hover { color: var(--color-fg); text-decoration-color: var(--color-muted); }
 
 .stat-strip { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin: 0 0 1.75rem; color: var(--color-muted); font-size: 0.9375rem; font-weight: 500; }
 .stat-strip span { position: relative; padding-left: 0.9rem; }
