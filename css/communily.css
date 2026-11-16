@@ -229,6 +229,9 @@ strong { font-weight: 600; }
   .c-roadmap__item { padding-left: 1rem; }
 }
 
+/* Sub-section inside a section (e.g. planned features below live ones) */
+.c-subsection { margin-top: 3.5rem; }
+
 /* Integrations */
 .c-integrations {
   list-style: none; display: grid;
